@@ -1,4 +1,4 @@
-/* Dead Cells Autosplitter (02-May-2020)
+/* Dead Cells Autosplitter (04-May-2020)
  * Maintained by R30hedron (@R30hedron#9520 on Discord)
  * Special thanks to Mintys (@Minty#4831) and Blargel (@Blargel#0213) for previously creating/maintaining the autosplitter.
  * 
@@ -23,17 +23,19 @@
 state("deadcells", "1.6.2") {
     string11 stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x49184, 0x434, 0x0, 0x58, 0x5C, 0x28;
-    int      playerx : "libhl.dll", 0x49184, 0x434, 0x0, 0x58, 0x64, 0x200;
-    int      playery : "libhl.dll", 0x49184, 0x434, 0x0, 0x58, 0x64, 0x208;
     int      control : "libhl.dll", 0x49184, 0x434, 0x0, 0x58, 0x68, 0xF8, 0xA0;
+    double   headx   : "libhl.dll", 0x49184, 0x434, 0x0, 0x58, 0x68, 0xF8, 0xA0, 0x200;
+    double   playerx : "libhl.dll", 0x49184, 0x434, 0x0, 0x58, 0x64, 0x200;
+    double   playery : "libhl.dll", 0x49184, 0x434, 0x0, 0x58, 0x64, 0x208;
 }
 
 state("deadcells", "1.8.5") {
     string11 stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x5C, 0x20;
-    int      playerx : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x200;
-    int      playery : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x208;
     int      control : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0;
+    double   headx   : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0, 0x200;
+    double   playerx : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x200;
+    double   playery : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x208;
 }
 
 state("deadcells", "Unknown Version") {
@@ -46,14 +48,17 @@ state("deadcells", "Unknown Version") {
  * 
  * [time]    : Stores the current in-game timer value.
  *
+ * [control] : Memory address for what object is controlled by the player.
+ *             If equal to zero, player does not have control.
+ *
+ * [headx]   : Stores the x coordinates for the head of the Beheaded.
+ *             headx > 2060 means you just (probably) barely entered the fountain
+ * 
  * [playerx]
  * [playery] : Stores the x and y coordinates for the Beheaded, but not the head.
  *             Used to determine if the player's body is in a certain region to mean you've ended the run
  *             playerx > 1465 means you are far enough forward in Throne Room
  *             playery < 1100 means you are in the final room in the Collector boss fight
- * 
- * [control] : Memory address for what object is controlled by the player.
- *             If equal to zero, player does not have control.
  * 
  */
 
@@ -156,21 +161,24 @@ split
     //Check if leaving the intermediate areas. 
     var exitPassage   = current.stage != old.stage && vars.passage.Contains(old.stage);
     
-    //Check if player loses control in Throne Room
+    //Check if player loses control in Throne Room and head x coord is different from beheaded x coord
     var exitFountain  = vars.throne.Contains(current.stage) && 
-                        current.playerx > 1465 &&
-                        current.control == 0 &&
-                        current.control != old.control;
+                        old.headx > 2060 && //Check if head is far enough to the right
+                        current.playerx > 1495 && //Failsafe to ensure player is to the right of the arena
+                        old.control != 0 && current.control == 0;
     
-    //Check if player loses control in Observatory
+    //Check if player loses control in Observatory during final cutscene
     var killCollector = vars.observatory.Contains(current.stage) &&
-                        current.playery < 1100 &&
-                        current.control == 0 &&
-                        current.control != old.control;
+                        current.playery < 1100 && //Check if player is in the final areana location
+                        old.control != 0 && current.control == 0;
     
     //print("current.time   : " + current.time);
     //print("current.stage  : " + current.stage);
     //print("current.control: " + current.control);
+    
+    print("current.stage: " + current.stage);
+    print("current.control: " + current.control);
+    print("headx: " + current.headx);
     
     return exitPassage || exitFountain || killCollector;
 }
