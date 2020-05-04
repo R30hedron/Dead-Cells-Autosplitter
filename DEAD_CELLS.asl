@@ -74,6 +74,10 @@ startup
     //options added here
     
     //Localization strings
+    vars.pq = new List<string> {
+    	"Prisoners' ",
+	"Quartier de"  // French
+    };
     vars.passage = new List<string> {
         "Passage to ",
         "Passageway ",
@@ -141,7 +145,7 @@ reset
     //if true, reset splitter
     //print("reset");
     
-    return current.time == 0 && current.stage == "Prisoners' ";
+    return current.time == 0 && vars.pq.Contains(current.stage);
 }
 
 start
