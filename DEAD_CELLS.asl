@@ -176,9 +176,9 @@ split
     //print("current.stage  : " + current.stage);
     //print("current.control: " + current.control);
     
-    print("current.stage: " + current.stage);
-    print("current.control: " + current.control);
-    print("headx: " + current.headx);
+    //print("current.stage: " + current.stage);
+    //print("current.control: " + current.control);
+    //print("headx: " + current.headx);
     
     return exitPassage || exitFountain || killCollector;
 }
