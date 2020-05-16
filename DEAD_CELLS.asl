@@ -1,4 +1,4 @@
-/* Dead Cells Autosplitter (04-May-2020)
+/* Dead Cells Autosplitter (02-May-2020)
  * Maintained by R30hedron (@R30hedron#9520 on Discord)
  * Special thanks to Mintys (@Minty#4831) and Blargel (@Blargel#0213) for previously creating/maintaining the autosplitter.
  * 
@@ -27,6 +27,7 @@ state("deadcells", "1.6.2") {
     double   headx   : "libhl.dll", 0x49184, 0x434, 0x0, 0x58, 0x68, 0xF8, 0xA0, 0x200;
     double   playerx : "libhl.dll", 0x49184, 0x434, 0x0, 0x58, 0x64, 0x200;
     double   playery : "libhl.dll", 0x49184, 0x434, 0x0, 0x58, 0x64, 0x208;
+    double   health  : "libhl.dll", 0x49184, 0x434, 0x0, 0x58, 0x64, 0xE8;
 }
 
 state("deadcells", "1.8.5") {
@@ -36,6 +37,7 @@ state("deadcells", "1.8.5") {
     double   headx   : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0, 0x200;
     double   playerx : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x200;
     double   playery : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x208;
+    double   health  : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0xE8;
 }
 
 state("deadcells", "Unknown Version") {
@@ -60,6 +62,8 @@ state("deadcells", "Unknown Version") {
  *             playerx > 1465 means you are far enough forward in Throne Room
  *             playery < 1100 means you are in the final room in the Collector boss fight
  * 
+ * [health]  : Stores current player health
+ *             Used as a failsafe to prevent the timer splitting if the player dies in the Collector boss fight
  */
 
 gameTime {
@@ -74,10 +78,6 @@ startup
     //options added here
     
     //Localization strings
-    vars.pq = new List<string> {
-    	"Prisoners' ",
-	"Quartier de"  // French
-    };
     vars.passage = new List<string> {
         "Passage to ",
         "Passageway ",
@@ -145,7 +145,7 @@ reset
     //if true, reset splitter
     //print("reset");
     
-    return current.time == 0 && vars.pq.Contains(current.stage);
+    return current.time == 0 && current.stage == "Prisoners' ";
 }
 
 start
@@ -174,15 +174,16 @@ split
     //Check if player loses control in Observatory during final cutscene
     var killCollector = vars.observatory.Contains(current.stage) &&
                         current.playery < 1100 && //Check if player is in the final areana location
+                        current.health != 0 && //Check if player is not dead
                         old.control != 0 && current.control == 0;
     
     //print("current.time   : " + current.time);
     //print("current.stage  : " + current.stage);
     //print("current.control: " + current.control);
     
-    //print("current.stage: " + current.stage);
-    //print("current.control: " + current.control);
-    //print("headx: " + current.headx);
+    print("current.stage: " + current.stage);
+    print("current.control: " + current.control);
+    print("headx: " + current.headx);
     
     return exitPassage || exitFountain || killCollector;
 }
