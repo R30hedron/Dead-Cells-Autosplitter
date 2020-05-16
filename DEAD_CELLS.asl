@@ -1,4 +1,4 @@
-/* Dead Cells Autosplitter (02-May-2020)
+/* Dead Cells Autosplitter (16-May-2020)
  * Maintained by R30hedron (@R30hedron#9520 on Discord)
  * Special thanks to Mintys (@Minty#4831) and Blargel (@Blargel#0213) for previously creating/maintaining the autosplitter.
  * 
@@ -78,6 +78,10 @@ startup
     //options added here
     
     //Localization strings
+    vars.pq = new List<string> {
+    	"Prisoners' ",
+	"Quartier de"  // French
+    };
     vars.passage = new List<string> {
         "Passage to ",
         "Passageway ",
@@ -145,7 +149,7 @@ reset
     //if true, reset splitter
     //print("reset");
     
-    return current.time == 0 && current.stage == "Prisoners' ";
+    return current.time == 0 && vars.pq.Contains(current.stage);
 }
 
 start
@@ -181,9 +185,9 @@ split
     //print("current.stage  : " + current.stage);
     //print("current.control: " + current.control);
     
-    print("current.stage: " + current.stage);
-    print("current.control: " + current.control);
-    print("headx: " + current.headx);
+    //print("current.stage: " + current.stage);
+    //print("current.control: " + current.control);
+    //print("headx: " + current.headx);
     
     return exitPassage || exitFountain || killCollector;
 }
