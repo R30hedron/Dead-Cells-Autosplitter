@@ -1,8 +1,12 @@
-/* Dead Cells Autosplitter (16-May-2020)
+/* Dead Cells Autosplitter (17-May-2020)
  * Maintained by R30hedron (@R30hedron#9520 on Discord)
  * Special thanks to Mintys (@Minty#4831) and Blargel (@Blargel#0213) for previously creating/maintaining the autosplitter.
+ * Thanks to Midknight13 (@Midknight13#3966) for verifying GOG version addresses
  * 
- * Currently works for Dead Cells Steam v. 1.6.2 and 1.8.5. Additional versions added by request.
+ * Currently works for the following Dead Cells versions. Additional versions added by request.
+ *     Steam v. 1.6.2
+ *     Steam v. 1.8.5
+ *     GOG   v. 1.7.1
  */
 
  /*
@@ -124,6 +128,8 @@ init
         case "7C89DD5B7AFDD68F60ACFF657C65E261": //1.6.2_gl
             version = "1.6.2";
             break;
+	case "B09AA0C6C1B9E323F3DF47ECC6AE40FD": //1.7.1 GOG
+        case "86666DB94BF117E113DCC2687E619E86": //1.7.1_gl GOG
         case "0CE0734F106EBC3DCC2AA6195B221F0F": //1.8.5
         case "56F5EA4738D6D01EE1D2408DBA2295B3": //1.8.5_gl
             version = "1.8.5";
