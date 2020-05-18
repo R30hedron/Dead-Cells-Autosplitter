@@ -76,6 +76,10 @@ gameTime {
     return TimeSpan.FromSeconds(current.time);
 }
 
+isLoading {
+    return true;
+}
+
 startup
 {
     //runs when starting livesplit
