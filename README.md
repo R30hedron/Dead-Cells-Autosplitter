@@ -19,6 +19,7 @@ Please forward any feedback, questions, or concerns to R30hedron on Discord (@R3
 Special thanks to:
 * Mintys for the initial autosplitter
 * Blargel for previously maintaining the autosplitter.
+* Midknight13 for requesting and verifying autosplitter addresses for the GOG version.
 
 Changelog: 
 * 1.1 (May-2020) Major rework of autosplitter; changed to be monolithic and much easier to update
