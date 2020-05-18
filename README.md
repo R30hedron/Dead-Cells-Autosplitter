@@ -9,6 +9,7 @@ The following are implemented:
 
 * Automatic Timer Starts
 * Automatic Splits
+    * Includes options to split on entering transition rooms, on leaving transitions rooms, or both.
 * Automatic Timer Resets
 * Support for Steam versions 1.6.2 and 1.8.5
 * Support for GOG Version 1.7.1
