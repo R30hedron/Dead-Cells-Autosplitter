@@ -183,13 +183,16 @@ split
     //if true, split.
     
     //Check if leaving the intermediate areas.
+    
+    var exitPassage = false;
+    
     if (settings["enter"])
     {
-    	var exitPassage   = current.stage != old.stage && vars.passage.Contains(current.stage);
-    }
+    	exitPassage = current.stage != old.stage && vars.passage.Contains(current.stage);
+    } 
     if (settings["leave"])
     {
-    	var exitPassage   = current.stage != old.stage && vars.passage.Contains(old.stage);
+    	exitPassage = current.stage != old.stage && vars.passage.Contains(old.stage);
     }
     
     //Check if player loses control in Throne Room and head x coord is different from beheaded x coord
