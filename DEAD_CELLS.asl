@@ -17,7 +17,7 @@
   *    - Time: Will be hooked into the "libhl.dll" module.
   *    - X and Y coordinates for the player
   *       We need both the X and Y coordinates for the beheaded and the head separately.
-  *       Easiest way to do so is to use the left door in the Throne Room, which has an
+  *       Easiest way to do so is to use the left door in the Throne Room, which should have an
   *       X coordinate of 490.8
   * 2) Add a new state, following the conventions below.
   * 3) Calculate the MD5 hashes for the version's deadcells.exe and deadcells_gl.exe and
@@ -58,7 +58,7 @@ state("deadcells", "Unknown Version") {
  *             If equal to zero, player does not have control.
  *
  * [headx]   : Stores the x coordinates for the head of the Beheaded.
- *             headx > 2060 means you just (probably) barely entered the fountain
+ *             headx > 2020 means you just (probably) barely entered the fountain
  * 
  * [playerx]
  * [playery] : Stores the x and y coordinates for the Beheaded, but not the head.
@@ -181,7 +181,7 @@ split
     
     //Check if player loses control in Throne Room and head x coord is different from beheaded x coord
     var exitFountain  = vars.throne.Contains(current.stage) && 
-                        old.headx > 2060 && //Check if head is far enough to the right
+                        old.headx > 2020 && //Check if head is far enough to the right
                         current.playerx > 1495 && //Failsafe to ensure player is to the right of the arena
                         old.control != 0 && current.control == 0;
     
