@@ -103,6 +103,12 @@ startup
         "Observatory",
         "Observatoir"  // French
     };
+    
+    settings.Add("enter", false, "Split on entering transition");
+    settings.SetToolTip("enter", "Enable splits on entering \"Passage to\" areas.");
+    
+    settings.Add("leave", true, "Split on leaving transition");
+    settings.SetToolTip("leave", "Enable splits on leaving \"Passage to\" areas (on by default).");
 }
 
 init
@@ -176,8 +182,15 @@ split
     //runs repeatedly when timer is running.
     //if true, split.
     
-    //Check if leaving the intermediate areas. 
-    var exitPassage   = current.stage != old.stage && vars.passage.Contains(old.stage);
+    //Check if leaving the intermediate areas.
+    if (settings["enter"])
+    {
+    	var exitPassage   = current.stage != old.stage && vars.passage.Contains(current.stage);
+    }
+    if (settings["leave"])
+    {
+    	var exitPassage   = current.stage != old.stage && vars.passage.Contains(old.stage);
+    }
     
     //Check if player loses control in Throne Room and head x coord is different from beheaded x coord
     var exitFountain  = vars.throne.Contains(current.stage) && 
