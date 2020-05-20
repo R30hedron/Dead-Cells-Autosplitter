@@ -109,6 +109,9 @@ startup
     
     settings.Add("leave", true, "Split on leaving transition");
     settings.SetToolTip("leave", "Enable splits on leaving \"Passage to\" areas (on by default).");
+    
+    settings.Add("debug", false, "Print debug statements");
+    settings.SetToolTip("debug", "Prints debug statements to console; can be viewed through DebugView");
 }
 
 init
@@ -207,13 +210,16 @@ split
                         current.health != 0 && //Check if player is not dead
                         old.control != 0 && current.control == 0;
     
-    //print("current.time   : " + current.time);
-    //print("current.stage  : " + current.stage);
-    //print("current.control: " + current.control);
-    
-    //print("current.stage: " + current.stage);
-    //print("current.control: " + current.control);
-    //print("headx: " + current.headx);
+    if (settings["debug"]
+    {
+        print("stage  : " + old.stage   + "/" + current.stage;
+        print("time   : " + old.time    + "/" + current.time;
+	print("control: " + old.control + "/" + current.control;
+	print("headx  : " + old.headx   + "/" + current.headx;
+	print("playerx: " + old.playerx + "/" + current.playerx;
+	print("playery: " + old.playery + "/" + current.playery;
+	print("health : " + old.health  + "/" + current.health;
+    }
     
     return exitPassage || exitFountain || killCollector;
 }
