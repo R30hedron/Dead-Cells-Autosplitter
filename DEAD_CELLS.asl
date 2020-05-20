@@ -162,6 +162,21 @@ init
     }
 }
 
+update
+{
+    if (settings["debug"]
+    {
+        print("MD5    : " + MD5Hash;
+        print("stage  : " + old.stage   + "/" + current.stage;
+        print("time   : " + old.time    + "/" + current.time;
+	print("control: " + old.control + "/" + current.control;
+	print("headx  : " + old.headx   + "/" + current.headx;
+	print("playerx: " + old.playerx + "/" + current.playerx;
+	print("playery: " + old.playery + "/" + current.playery;
+	print("health : " + old.health  + "/" + current.health;
+    }
+}
+
 reset
 {
     //runs repeatedly when timer is running.
@@ -209,17 +224,6 @@ split
                         current.playery < 1100 && //Check if player is in the final areana location
                         current.health != 0 && //Check if player is not dead
                         old.control != 0 && current.control == 0;
-    
-    if (settings["debug"]
-    {
-        print("stage  : " + old.stage   + "/" + current.stage;
-        print("time   : " + old.time    + "/" + current.time;
-	print("control: " + old.control + "/" + current.control;
-	print("headx  : " + old.headx   + "/" + current.headx;
-	print("playerx: " + old.playerx + "/" + current.playerx;
-	print("playery: " + old.playery + "/" + current.playery;
-	print("health : " + old.health  + "/" + current.health;
-    }
-    
+
     return exitPassage || exitFountain || killCollector;
 }
