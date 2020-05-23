@@ -21,8 +21,6 @@ The following are implemented:
 * Automatic Timer Starts
 * Automatic Splits
 * Automatic Timer Resets
-* Support for Steam versions 1.6.2 and 1.8.5
-* Support for GOG Version 1.7.1
 * Support for English and French localizations.
 
 Please forward any feedback, questions, or concerns to R30hedron on Discord (@R30hedron#9529).
