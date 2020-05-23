@@ -167,15 +167,15 @@ update
 {
     if (settings["debug"])
     {
-        print("--------------------------------------------------");
-        print("MD5    : " + vars.MD5Hash);
-        print("stage  : " + old.stage   + " / " + current.stage);
-        print("time   : " + old.time    + " / " + current.time);
-        print("control: " + old.control + " / " + current.control);
-        print("headx  : " + old.headx   + " / " + current.headx);
-        print("playerx: " + old.playerx + " / " + current.playerx);
-        print("playery: " + old.playery + " / " + current.playery);
-        print("health : " + old.health  + " / " + current.health);
+        print("--------------------------------------------------\n" + 
+	      "MD5    : " + vars.MD5Hash + "\n" +
+	      "stage  : " + old.stage   + " / " + current.stage + "\n" +
+	      "time   : " + old.time    + " / " + current.time + "\n" +
+	      "control: " + old.control + " / " + current.control + "\n" +
+	      "headx  : " + old.headx   + " / " + current.headx + "\n" +
+	      "playerx: " + old.playerx + " / " + current.playerx + "\n" +
+	      "playery: " + old.playery + " / " + current.playery + "\n" +
+	      "health : " + old.health  + " / " + current.health);
     }
 }
 
