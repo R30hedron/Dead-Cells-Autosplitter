@@ -78,8 +78,14 @@ state("deadcells", "1.8.5") {
 }
 
 state("deadcells", "Unknown Version") {
+    //Default to 1.8.5, since it seems that the most recent versions all have the same addresses.
     string11 stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x5C, 0x20;
+    int      control : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0;
+    double   headx   : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0, 0x200;
+    double   playerx : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x200;
+    double   playery : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x208;
+    int      health  : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0xE8;
 }
 
 /* Variable Info
@@ -184,11 +190,12 @@ init
         default:
             version = "Unknown Version";
             MessageBox.Show(timer.Form,
-                  "Dead Cells Autosplitter Error:\n\n"
-                  + "This autosplitter does not support this game version."
-                  + "Please contact R30hedron (@R30hedron#9520 on Discord)\n"
-            + "with the following string and the game's version number.\n\n"
-                  + "MD5Hash: " + MD5Hash,
+                "Dead Cells Autosplitter Error:\n\n"
+                + "This autosplitter does not support this game version."
+                + "Please contact R30hedron (@R30hedron#9520 on Discord)\n"
+                + "with the following string and the game's version number.\n\n"
+                + "MD5Hash: " + MD5Hash + "\n\n"
+                + "Defaulting to the most recent known memory addesses...",
                   "Dead Cells Autosplitter Error",
                   MessageBoxButtons.OK,
                   MessageBoxIcon.Error);
