@@ -13,6 +13,7 @@ This autosplitter supports the following versions of Dead Cells:
     * 1.8.5
 * GOG
     * 1.7.1
+    
 If you need an autosplitter for an earlier version, please check the "Old" folder included in this github repository or contact R30hedron on Discord with the version you need. If you wish to speedrun a non-Steam version of Dead Cells, _please_ get in touch with R30hedron on Discord (@R30hedron#9529) so that we can verify the autosplitter is functional for your version.
 
 The following are implemented:
