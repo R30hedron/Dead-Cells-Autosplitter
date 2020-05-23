@@ -164,9 +164,9 @@ init
 
 update
 {
-    if (settings["debug"]
+    if (settings["debug"])
     {
-        print("MD5    : " + MD5Hash;
+        print("MD5    : " + MD5Hash);
         print("stage  : " + old.stage   + "/" + current.stage);
         print("time   : " + old.time    + "/" + current.time);
 	print("control: " + old.control + "/" + current.control);
