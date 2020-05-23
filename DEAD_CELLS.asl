@@ -1,11 +1,14 @@
-/* Dead Cells Autosplitter (17-May-2020)
+/* Dead Cells Autosplitter (23-May-2020)
  * Maintained by R30hedron (@R30hedron#9520 on Discord)
  * Special thanks to Mintys (@Minty#4831) and Blargel (@Blargel#0213) for previously creating/maintaining the autosplitter.
  * Thanks to Midknight13 (@Midknight13#3966) for verifying GOG version addresses
  * 
  * Currently works for the following Dead Cells versions. Additional versions added by request.
  *     Steam v. 1.6.2
+ *     Steam v. 1.7.1
+ *     Steam v. 1.7.4
  *     Steam v. 1.8.5
+ *
  *     GOG   v. 1.7.1
  */
 
@@ -32,6 +35,36 @@ state("deadcells", "1.6.2") {
     double   playerx : "libhl.dll", 0x49184, 0x434, 0x0, 0x58, 0x64, 0x200;
     double   playery : "libhl.dll", 0x49184, 0x434, 0x0, 0x58, 0x64, 0x208;
     int      health  : "libhl.dll", 0x49184, 0x434, 0x0, 0x58, 0x64, 0xE8;
+}
+
+state("deadcells", "1.7.1") {
+    string11 stage   : "discord.hdll", 0x1574, 0x1C;
+    double   time    : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x5C, 0x20;
+    int      control : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0;
+    double   headx   : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0, 0x200;
+    double   playerx : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x200;
+    double   playery : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x208;
+    int      health  : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0xE8;
+}
+
+state("deadcells", "1.7.1 GOG") {
+    string11 stage   : "discord.hdll", 0x1574, 0x1C;
+    double   time    : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x5C, 0x20;
+    int      control : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0;
+    double   headx   : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0, 0x200;
+    double   playerx : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x200;
+    double   playery : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x208;
+    int      health  : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0xE8;
+}
+
+state("deadcells", "1.7.4") {
+    string11 stage   : "discord.hdll", 0x1574, 0x1C;
+    double   time    : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x5C, 0x20;
+    int      control : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0;
+    double   headx   : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0, 0x200;
+    double   playerx : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x200;
+    double   playery : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x208;
+    int      health  : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0xE8;
 }
 
 state("deadcells", "1.8.5") {
@@ -87,8 +120,8 @@ startup
     
     //Localization strings
     vars.pq = new List<string> {
-    	"Prisoners' ",
-	"Quartier de"  // French
+        "Prisoners' ",
+    "Quartier de"  // French
     };
     vars.passage = new List<string> {
         "Passage to ",
@@ -132,8 +165,18 @@ init
         case "7C89DD5B7AFDD68F60ACFF657C65E261": //1.6.2_gl
             version = "1.6.2";
             break;
-	case "B09AA0C6C1B9E323F3DF47ECC6AE40FD": //1.7.1 GOG
+        case "CE5EE20A1358B472222717129B6BC130": //1.7.1
+        case "1AF83FDD50EFDE7C235A2703C7005A51": //1.7.1_gl
+            version = "1.7.1";
+            break;
+        case "CA7B1C70879BC1431C74AE914B9DDA3B": //1.7.4
+        case "D9246EF63709168B2591B5C29CD270F7": //1.7.4_gl
+            version = "1.7.4";
+            break;
+        case "B09AA0C6C1B9E323F3DF47ECC6AE40FD": //1.7.1 GOG
         case "86666DB94BF117E113DCC2687E619E86": //1.7.1_gl GOG
+            version = "1.7.1 GOG";
+            break;
         case "0CE0734F106EBC3DCC2AA6195B221F0F": //1.8.5
         case "56F5EA4738D6D01EE1D2408DBA2295B3": //1.8.5_gl
             version = "1.8.5";
@@ -141,14 +184,14 @@ init
         default:
             version = "Unknown Version";
             MessageBox.Show(timer.Form,
-      			"Dead Cells Autosplitter Error:\n\n"
-			      + "This autosplitter does not support this game version."
-			      + "Please contact R30hedron (@R30hedron#9520 on Discord)\n"
+                  "Dead Cells Autosplitter Error:\n\n"
+                  + "This autosplitter does not support this game version."
+                  + "Please contact R30hedron (@R30hedron#9520 on Discord)\n"
             + "with the following string and the game's version number.\n\n"
-			      + "MD5Hash: " + MD5Hash,
-			      "Dead Cells Autosplitter Error",
-			      MessageBoxButtons.OK,
-			      MessageBoxIcon.Error);
+                  + "MD5Hash: " + MD5Hash,
+                  "Dead Cells Autosplitter Error",
+                  MessageBoxButtons.OK,
+                  MessageBoxIcon.Error);
             break;
     }
 }
