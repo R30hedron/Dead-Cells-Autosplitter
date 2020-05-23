@@ -132,6 +132,7 @@ init
     }
     
     var MD5Hash = exeMD5HashBytes.Select(x => x.ToString("X2")).Aggregate((a, b) => a + b);
+    vars.MD5Hash = MD5Hash;
     print("MD5: " + MD5Hash);
     
     
@@ -166,14 +167,15 @@ update
 {
     if (settings["debug"])
     {
-        //print("MD5    : " + MD5Hash);
-        print("stage  : " + old.stage   + "/" + current.stage);
-        print("time   : " + old.time    + "/" + current.time);
-        print("control: " + old.control + "/" + current.control);
-        print("headx  : " + old.headx   + "/" + current.headx);
-        print("playerx: " + old.playerx + "/" + current.playerx);
-        print("playery: " + old.playery + "/" + current.playery);
-        print("health : " + old.health  + "/" + current.health);
+        print("--------------------------------------------------");
+        print("MD5    : " + vars.MD5Hash);
+        print("stage  : " + old.stage   + " / " + current.stage);
+        print("time   : " + old.time    + " / " + current.time);
+        print("control: " + old.control + " / " + current.control);
+        print("headx  : " + old.headx   + " / " + current.headx);
+        print("playerx: " + old.playerx + " / " + current.playerx);
+        print("playery: " + old.playery + " / " + current.playery);
+        print("health : " + old.health  + " / " + current.health);
     }
 }
 
