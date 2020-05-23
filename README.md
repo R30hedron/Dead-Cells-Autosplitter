@@ -7,12 +7,12 @@ To download the autosplitter manually, go [here](https://raw.githubusercontent.c
 
 This autosplitter supports the following versions of Dead Cells:
 * Steam
-    * 1.6.2
-    * 1.7.1
-    * 1.7.2
-    * 1.8.5
+    * 1.6.2 (2019-12-20 0173ba02)
+    * 1.7.1 (2020-02-19 df004900)
+    * 1.7.2 (2020-03-26 14056710)
+    * 1.8.5 (2020-04-22 4d2fa520)
 * GOG
-    * 1.7.1
+    * 1.7.1 (2020-02-19 df004900)
     
 If you need an autosplitter for an earlier version, please check the "Old" folder included in this github repository or contact R30hedron on Discord with the version you need. If you wish to speedrun a non-Steam version of Dead Cells, _please_ get in touch with R30hedron on Discord (@R30hedron#9529) so that we can verify the autosplitter is functional for your version.
 
