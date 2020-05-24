@@ -251,8 +251,8 @@ split
 {
     //runs repeatedly when timer is running.
     //if true, split.
-    //Check if leaving the intermediate areas.
     
+    //Check if leaving the intermediate areas.
     var exitPassage = false;
     
     if (settings["enter"])
