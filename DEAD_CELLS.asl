@@ -127,7 +127,7 @@ startup
     //Localization strings
     vars.pq = new List<string> {
         "Prisoners' ",
-    "Quartier de"  // French
+        "Quartier de"  // French
     };
     vars.passage = new List<string> {
         "Passage to ",
