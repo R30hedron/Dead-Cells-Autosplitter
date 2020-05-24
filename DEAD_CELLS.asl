@@ -143,14 +143,14 @@ startup
         "Observatoir"  // French
     };
     
-                                                                 
-                                                                                    
+    settings.Add("enter", false, "Split on entering transition");
+    settings.SetToolTip("enter", "Enable splits on entering \"Passage to\" areas.");
     
-                                                               
-                                                                                                   
+    settings.Add("leave", true, "Split on leaving transition");
+    settings.SetToolTip("leave", "Enable splits on leaving \"Passage to\" areas (on by default).");
     
-                                                           
-                                                                                                        
+    settings.Add("debug", false, "Print debug statements");
+    settings.SetToolTip("debug", "Prints debug statements to console; can be viewed through DebugView");
 }
 
 init
@@ -171,7 +171,7 @@ init
     }
     
     var MD5Hash = exeMD5HashBytes.Select(x => x.ToString("X2")).Aggregate((a, b) => a + b);
-                           
+    vars.MD5Hash = MD5Hash;
     print("MD5: " + MD5Hash);
     
     
@@ -213,21 +213,21 @@ init
     }
 }
 
-      
- 
-                          
-     
-                                                                       
-                                          
-                                                                 
-                                                                
-                                                                   
-                                                                 
-                                                                   
-                                                                   
-                                                           
-     
- 
+update
+{
+    if (settings["debug"])
+    {
+        print("--------------------------------------------------\n" + 
+        "MD5    : " + vars.MD5Hash + "\n" +
+        "stage  : " + old.stage   + " / " + current.stage + "\n" +
+        "time   : " + old.time    + " / " + current.time + "\n" +
+        "control: " + old.control + " / " + current.control + "\n" +
+        "headx  : " + old.headx   + " / " + current.headx + "\n" +
+        "playerx: " + old.playerx + " / " + current.playerx + "\n" +
+        "playery: " + old.playery + " / " + current.playery + "\n" +
+        "health : " + old.health  + " / " + current.health);
+    }
+}
 
 reset
 {
@@ -251,20 +251,19 @@ split
 {
     //runs repeatedly when timer is running.
     //if true, split.
+    //Check if leaving the intermediate areas.
     
-                                              
+    var exitPassage = false;
     
-                            
-    
-    //Check if leaving the intermediate areas. 
-     
-                                                                                      
-      
-                          
-     
-    var exitPassage   = current.stage != old.stage && vars.passage.Contains(old.stage);
-     
-    
+    if (settings["enter"])
+    {
+    	exitPassage = current.stage != old.stage && vars.passage.Contains(current.stage);
+    } 
+    if (settings["leave"])
+    {
+    	exitPassage = current.stage != old.stage && vars.passage.Contains(old.stage);
+    }
+
     //Check if player loses control in Throne Room and head x coord is different from beheaded x coord
     var exitFountain  = vars.throne.Contains(current.stage) && 
                         old.headx > 2020 && //Check if head is far enough to the right
@@ -276,14 +275,6 @@ split
                         current.playery < 1100 && //Check if player is in the final areana location
                         current.health != 0 && //Check if player is not dead
                         old.control != 0 && current.control == 0;
-    
-    //print("current.time   : " + current.time);
-    //print("current.stage  : " + current.stage);
-    //print("current.control: " + current.control);
-    
-    //print("current.stage: " + current.stage);
-    //print("current.control: " + current.control);
-    //print("headx: " + current.headx);
-    
+
     return exitPassage || exitFountain || killCollector;
 }
