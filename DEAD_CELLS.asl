@@ -236,7 +236,7 @@ reset
     
     if (settings["debug"] && (current.time == 0 && vars.pq.Contains(current.stage)))
     {
-        print("Reset");
+        print("DEBUG: Reset");
     }
     
     return current.time == 0 && vars.pq.Contains(current.stage);
@@ -249,7 +249,7 @@ start
     
     if (settings["debug"] && (old.time == 0 && current.time > 00 && current.time < 0.1))
     {
-        print("Start");
+        print("DEBUG: Start");
     }
     
     return old.time == 0 && current.time > 00 && current.time < 0.1;
@@ -286,7 +286,7 @@ split
     
     if (settings["debug"] && (exitPassage || exitFountain || killCollector))
     {
-        print("Split");
+        print("DEBUG: Split");
     }
     
     return exitPassage || exitFountain || killCollector;
