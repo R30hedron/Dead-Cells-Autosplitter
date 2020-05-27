@@ -150,7 +150,8 @@ startup
     settings.SetToolTip("leave", "Enable splits on leaving \"Passage to\" areas (on by default).");
     
     settings.Add("debug", false, "Print debug statements");
-    settings.SetToolTip("debug", "Prints debug statements to console; can be viewed through DebugView");
+    settings.SetToolTip("debug", "Prints debug statements to console; can be viewed through DebugView.\n
+                                  You should only enable this if you are helping to debug the autosplitter.");
 }
 
 init
