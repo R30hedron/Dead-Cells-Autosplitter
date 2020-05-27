@@ -20,6 +20,7 @@ The following are implemented:
 
 * Automatic Timer Starts
 * Automatic Splits
+    * Includes options to split on entering transition rooms, on leaving transition rooms, or both.
 * Automatic Timer Resets
 * Support for English and French localizations.
 

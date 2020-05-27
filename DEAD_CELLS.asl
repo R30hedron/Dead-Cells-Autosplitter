@@ -1,4 +1,4 @@
-/* Dead Cells Autosplitter (23-May-2020)
+/* Dead Cells Autosplitter (27-May-2020)
  * Maintained by R30hedron (@R30hedron#9520 on Discord)
  * Special thanks to Mintys (@Minty#4831) and Blargel (@Blargel#0213) for previously creating/maintaining the autosplitter.
  * Thanks to Midknight13 (@Midknight13#3966) for verifying GOG version addresses
@@ -142,6 +142,15 @@ startup
         "Observatory",
         "Observatoir"  // French
     };
+    
+    settings.Add("enter", false, "Split on entering transition");
+    settings.SetToolTip("enter", "Enable splits on entering \"Passage to\" areas.");
+    
+    settings.Add("leave", true, "Split on leaving transition");
+    settings.SetToolTip("leave", "Enable splits on leaving \"Passage to\" areas (on by default).");
+    
+    settings.Add("debug", false, "Print debug statements");
+    settings.SetToolTip("debug", "Prints debug statements to console; can be viewed through DebugView");
 }
 
 init
@@ -162,6 +171,7 @@ init
     }
     
     var MD5Hash = exeMD5HashBytes.Select(x => x.ToString("X2")).Aggregate((a, b) => a + b);
+    vars.MD5Hash = MD5Hash;
     print("MD5: " + MD5Hash);
     
     
@@ -203,11 +213,31 @@ init
     }
 }
 
+update
+{
+    if (settings["debug"])
+    {
+        print("--------------------------------------------------\n" + 
+        "MD5    : " + vars.MD5Hash + "\n" +
+        "stage  : " + old.stage   + " / " + current.stage + "\n" +
+        "time   : " + old.time    + " / " + current.time + "\n" +
+        "control: " + old.control + " / " + current.control + "\n" +
+        "headx  : " + old.headx   + " / " + current.headx + "\n" +
+        "playerx: " + old.playerx + " / " + current.playerx + "\n" +
+        "playery: " + old.playery + " / " + current.playery + "\n" +
+        "health : " + old.health  + " / " + current.health);
+    }
+}
+
 reset
 {
     //runs repeatedly when timer is running.
     //if true, reset splitter
-    //print("reset");
+    
+    if (settings["debug"] && (current.time == 0 && vars.pq.Contains(current.stage)))
+    {
+        print("DEBUG: Reset");
+    }
     
     return current.time == 0 && vars.pq.Contains(current.stage);
 }
@@ -216,7 +246,11 @@ start
 {
     //runs repeatedly when timer is at 0.0 and ready to start.
     //if true, splitter will start
-    //print("start");
+    
+    if (settings["debug"] && (old.time == 0 && current.time > 00 && current.time < 0.1))
+    {
+        print("DEBUG: Start");
+    }
     
     return old.time == 0 && current.time > 00 && current.time < 0.1;
 }
@@ -226,9 +260,18 @@ split
     //runs repeatedly when timer is running.
     //if true, split.
     
-    //Check if leaving the intermediate areas. 
-    var exitPassage   = current.stage != old.stage && vars.passage.Contains(old.stage);
+    //Check if leaving the intermediate areas.
+    var exitPassage = false;
     
+    if (settings["enter"])
+    {
+    	exitPassage = current.stage != old.stage && vars.passage.Contains(current.stage);
+    } 
+    if (settings["leave"])
+    {
+    	exitPassage = current.stage != old.stage && vars.passage.Contains(old.stage);
+    }
+
     //Check if player loses control in Throne Room and head x coord is different from beheaded x coord
     var exitFountain  = vars.throne.Contains(current.stage) && 
                         old.headx > 2020 && //Check if head is far enough to the right
@@ -241,13 +284,10 @@ split
                         current.health != 0 && //Check if player is not dead
                         old.control != 0 && current.control == 0;
     
-    //print("current.time   : " + current.time);
-    //print("current.stage  : " + current.stage);
-    //print("current.control: " + current.control);
-    
-    //print("current.stage: " + current.stage);
-    //print("current.control: " + current.control);
-    //print("headx: " + current.headx);
+    if (settings["debug"] && (exitPassage || exitFountain || killCollector))
+    {
+        print("DEBUG: Split");
+    }
     
     return exitPassage || exitFountain || killCollector;
 }
