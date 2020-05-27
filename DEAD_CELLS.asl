@@ -150,8 +150,8 @@ startup
     settings.SetToolTip("leave", "Enable splits on leaving \"Passage to\" areas (on by default).");
     
     settings.Add("debug", false, "Print debug statements");
-    settings.SetToolTip("debug", "Prints debug statements to console; can be viewed through DebugView.\n
-                                  You should only enable this if you are helping to debug the autosplitter.");
+    settings.SetToolTip("debug", "Prints debug statements to console; can be viewed through DebugView.\n"
+                               + "You should only enable this if you are helping to debug the autosplitter.");
 }
 
 init
@@ -202,7 +202,7 @@ init
             version = "Unknown Version";
             MessageBox.Show(timer.Form,
                 "Dead Cells Autosplitter Error:\n\n"
-                + "This autosplitter does not support this game version."
+                + "This autosplitter does not support this game version.\n"
                 + "Please contact R30hedron (@R30hedron#9520 on Discord)\n"
                 + "with the following string and the game's version number.\n\n"
                 + "MD5Hash: " + MD5Hash + "\n\n"
