@@ -233,7 +233,11 @@ reset
 {
     //runs repeatedly when timer is running.
     //if true, reset splitter
-    //print("reset");
+    
+    if (settings["debug"] && (current.time == 0 && vars.pq.Contains(current.stage)))
+    {
+        print("Reset");
+    }
     
     return current.time == 0 && vars.pq.Contains(current.stage);
 }
@@ -242,7 +246,11 @@ start
 {
     //runs repeatedly when timer is at 0.0 and ready to start.
     //if true, splitter will start
-    //print("start");
+    
+    if (settings["debug"] && (old.time == 0 && current.time > 00 && current.time < 0.1))
+    {
+        print("Start");
+    }
     
     return old.time == 0 && current.time > 00 && current.time < 0.1;
 }
@@ -275,6 +283,11 @@ split
                         current.playery < 1100 && //Check if player is in the final areana location
                         current.health != 0 && //Check if player is not dead
                         old.control != 0 && current.control == 0;
-
+    
+    if (settings["debug"] && (exitPassage || exitFountain || killCollector))
+    {
+        print("Split");
+    }
+    
     return exitPassage || exitFountain || killCollector;
 }
