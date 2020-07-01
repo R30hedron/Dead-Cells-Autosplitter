@@ -1,4 +1,4 @@
-/* Dead Cells Autosplitter (27-May-2020)
+/* Dead Cells Autosplitter (01-JUL-2020)
  * Maintained by R30hedron (@R30hedron#9520 on Discord)
  * Special thanks to Mintys (@Minty#4831) and Blargel (@Blargel#0213) for previously creating/maintaining the autosplitter.
  * Thanks to Midknight13 (@Midknight13#3966) for verifying GOG version addresses
@@ -8,6 +8,7 @@
  *     Steam v. 1.7.1
  *     Steam v. 1.7.4
  *     Steam v. 1.8.5
+ *     Steam v. 1.9.7
  *
  *     GOG   v. 1.7.1
  */
@@ -77,14 +78,24 @@ state("deadcells", "1.8.5") {
     int      health  : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0xE8;
 }
 
-state("deadcells", "Unknown Version") {
-    //Default to 1.8.5, since it seems that the most recent versions all have the same addresses.
+state("deadcells", "1.9.7") {
     string11 stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0;
-    double   headx   : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0, 0x200;
-    double   playerx : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x200;
-    double   playery : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x208;
+    double   headx   : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0, 0x210;
+    double   playerx : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x210;
+    double   playery : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x218;
+    int      health  : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0xE8;
+}
+
+state("deadcells", "Unknown Version") {
+    //Default to 1.9.7, since it seems that the most recent versions all have the same addresses.
+    string11 stage   : "discord.hdll", 0x1574, 0x1C;
+    double   time    : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x5C, 0x20;
+    int      control : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0;
+    double   headx   : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0, 0x210;
+    double   playerx : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x210;
+    double   playery : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x218;
     int      health  : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0xE8;
 }
 
@@ -197,6 +208,10 @@ init
         case "0CE0734F106EBC3DCC2AA6195B221F0F": //1.8.5
         case "56F5EA4738D6D01EE1D2408DBA2295B3": //1.8.5_gl
             version = "1.8.5";
+            break;
+        case "3124766B0AF66816797E8181BF4A1298": //1.9.7
+        case "D9ADFE07B4361524E7B5727BCCAB7842": //1.9.7_gl
+            version = "1.9.7";
             break;
         default:
             version = "Unknown Version";
