@@ -211,6 +211,8 @@ init
             break;
         case "3124766B0AF66816797E8181BF4A1298": //1.9.7
         case "D9ADFE07B4361524E7B5727BCCAB7842": //1.9.7_gl
+        case "26FC75193F4B530DE0AE7082F9C7E32E": //1.9.7 hotfix
+        case "04D91182EF920120267DEF438F6BDE1C": //1.9.7_gl hotfix
             version = "1.9.7";
             break;
         default:
