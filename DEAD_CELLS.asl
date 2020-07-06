@@ -213,6 +213,8 @@ init
         case "D9ADFE07B4361524E7B5727BCCAB7842": //1.9.7_gl
         case "26FC75193F4B530DE0AE7082F9C7E32E": //1.9.7 hotfix
         case "04D91182EF920120267DEF438F6BDE1C": //1.9.7_gl hotfix
+        case "2374914D7B73B09EDDDD21778F0DBF07": //1.9.7 hotfix 2
+        case "EE243B6BDE53A0D8EE6EBB4265B2B692": //1.9.7_gl hotfix 2
             version = "1.9.7";
             break;
         default:
