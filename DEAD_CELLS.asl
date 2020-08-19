@@ -10,6 +10,7 @@
  *     Steam v. 18.5
  *     Steam v. 19.7
  *     Steam v. 20.7
+ *     Steam v. 20.8
  *
  *     GOG   v. 17.1
  */
@@ -90,6 +91,16 @@ state("deadcells", "19.7") {
 }
 
 state("deadcells", "20.7") {
+    string11 stage   : "discord.hdll", 0x1574, 0x1C;
+    double   time    : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x5C, 0x20;
+    int      control : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xFC, 0xA0;
+    double   headx   : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xFC, 0xA0, 0x218;
+    double   playerx : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x218;
+    double   playery : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x220;
+    int      health  : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0xF0;
+}
+
+state("deadcells", "20.8") {
     string11 stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xFC, 0xA0;
@@ -231,6 +242,10 @@ init
         case "E8C26AEEC84DFE64D30AFB25F2972C67": //20.7
         case "BE9B6159292CD054DE223E97CA746FA9": //20.7_gl
             version = "20.7";
+            break;
+        case "52852A88C226BC11CC087BAE5EA748C8": //20.8
+        case "6CFE2E36EE96484A65672166341C7CCC": //20.8_gl
+            version = "20.8";
             break;
         default:
             version = "Unknown Version";
