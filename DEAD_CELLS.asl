@@ -31,7 +31,7 @@
   */
 
 state("deadcells", "16.2") {
-    string11 stage   : "discord.hdll", 0x1574, 0x1C;
+    string10 stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x49184, 0x434, 0x0, 0x58, 0x5C, 0x28;
     int      control : "libhl.dll", 0x49184, 0x434, 0x0, 0x58, 0x68, 0xF8, 0xA0;
     double   headx   : "libhl.dll", 0x49184, 0x434, 0x0, 0x58, 0x68, 0xF8, 0xA0, 0x200;
@@ -41,7 +41,7 @@ state("deadcells", "16.2") {
 }
 
 state("deadcells", "17.1") {
-    string11 stage   : "discord.hdll", 0x1574, 0x1C;
+    string10 stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0;
     double   headx   : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0, 0x200;
@@ -51,7 +51,7 @@ state("deadcells", "17.1") {
 }
 
 state("deadcells", "17.1 GOG") {
-    string11 stage   : "discord.hdll", 0x1574, 0x1C;
+    string10 stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0;
     double   headx   : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0, 0x200;
@@ -61,7 +61,7 @@ state("deadcells", "17.1 GOG") {
 }
 
 state("deadcells", "17.4") {
-    string11 stage   : "discord.hdll", 0x1574, 0x1C;
+    string10 stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0;
     double   headx   : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0, 0x200;
@@ -71,7 +71,7 @@ state("deadcells", "17.4") {
 }
 
 state("deadcells", "18.5") {
-    string11 stage   : "discord.hdll", 0x1574, 0x1C;
+    string10 stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0;
     double   headx   : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0, 0x200;
@@ -81,7 +81,7 @@ state("deadcells", "18.5") {
 }
 
 state("deadcells", "19.7") {
-    string11 stage   : "discord.hdll", 0x1574, 0x1C;
+    string10 stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0;
     double   headx   : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0, 0x210;
@@ -91,7 +91,7 @@ state("deadcells", "19.7") {
 }
 
 state("deadcells", "20.7") {
-    string11 stage   : "discord.hdll", 0x1574, 0x1C;
+    string10 stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xFC, 0xA0;
     double   headx   : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xFC, 0xA0, 0x218;
@@ -101,7 +101,7 @@ state("deadcells", "20.7") {
 }
 
 state("deadcells", "20.8") {
-    string11 stage   : "discord.hdll", 0x1574, 0x1C;
+    string10 stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xFC, 0xA0;
     double   headx   : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xFC, 0xA0, 0x218;
@@ -112,7 +112,7 @@ state("deadcells", "20.8") {
 
 state("deadcells", "Unknown Version") {
     //Default to 20.7, since it seems that the most recent versions all have the same addresses.
-    string11 stage   : "discord.hdll", 0x1574, 0x1C;
+    string10 stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0;
     double   headx   : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0, 0x210;
@@ -159,21 +159,26 @@ startup
     
     //Localization strings
     vars.pq = new List<string> {
-        "Prisoners' ",
-        "Quartier de"  // French
+        "Prisoners'",
+        "Quartier d", // French
+        "Celdas de "  // Spanish
     };
     vars.passage = new List<string> {
-        "Passage to ",
-        "Passageway ",
-        "Passage ver"  // French
+        "Passage to",
+        "Passageway",
+        "Passage ve", // French
+        "Pasaje a l",
+        "Pasaje al "  //Spanish
     };
     vars.throne = new List<string> {
-        "Throne Room",
-        "Salle du tr"  // French
+        "Throne Roo",
+        "Salle du t", // French
+        "Sala del T"  // Spanish
     };
     vars.observatory = new List<string> {
-        "Observatory",
-        "Observatoir"  // French
+        "Observator",
+        "Observatoi", // French
+      //"Observator"  //Spanish
     };
     
     settings.Add("enter", false, "Split on entering transition");
