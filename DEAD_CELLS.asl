@@ -1,4 +1,4 @@
-/* Dead Cells Autosplitter (24-DEC-2020)
+/* Dead Cells Autosplitter (29-JAN-2021)
  * Maintained by R30hedron (@R30hedron#9520 on Discord)
  * Special thanks to Mintys (@Minty#4831) and Blargel (@Blargel#0213) for previously creating/maintaining the autosplitter.
  * Thanks to Midknight13 (@Midknight13#3966) for verifying GOG version addresses
@@ -345,16 +345,17 @@ split
     //runs repeatedly when timer is running.
     //if true, split.
     
-    //Check if leaving the intermediate areas.
-    var exitPassage = false;
+    //Check if entering or leaving the intermediate areas.
+    var enterPassage = false;
+    var exitPassage  = false;
     
     if (settings["enter"])
     {
-    	exitPassage = current.stage != old.stage && vars.passage.Contains(current.stage);
+    	enterPassage = current.stage != old.stage && vars.passage.Contains(current.stage);
     } 
     if (settings["leave"])
     {
-    	exitPassage = current.stage != old.stage && vars.passage.Contains(old.stage);
+    	exitPassage  = current.stage != old.stage && vars.passage.Contains(old.stage);
     }
 
     //Check if player loses control in Throne Room and head x coord is different from beheaded x coord
@@ -369,10 +370,13 @@ split
                         current.health != 0 && //Check if player is not dead
                         old.control != 0 && current.control == 0;
     
-    if (settings["debug"] && (exitPassage || exitFountain || killCollector))
+    var isSplit = false;
+    split = enterPassage || enterexitPassage || exitFountain || killCollector
+    
+    if (settings["debug"] && isSplit)
     {
         print("DEBUG: Split");
     }
     
-    return exitPassage || exitFountain || killCollector;
+    return isSplit;
 }
