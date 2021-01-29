@@ -371,7 +371,7 @@ split
                         old.control != 0 && current.control == 0;
     
     var isSplit = false;
-    isSplit = enterPassage || enterexitPassage || exitFountain || killCollector;
+    isSplit = enterPassage || exitPassage || exitFountain || killCollector;
     
     if (settings["debug"] && isSplit)
     {
