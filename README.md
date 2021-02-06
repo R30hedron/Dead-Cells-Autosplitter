@@ -1,7 +1,7 @@
 # Dead-Cells-Autosplitter
 This is a Dead Cells autosplitter for LiveSplit. 
 
-For information on what an autosplitter is, go [here](https://github.com/LiveSplit/LiveSplit/blob/master/Documentation/Auto-Splitters.md). For information on ItB Speedruns, go [here](https://www.speedrun.com/deadcells).
+For information on what an autosplitter is, go [here](https://github.com/LiveSplit/LiveSplit.AutoSplitters/blob/master/README.md). For information on Dead Cells Speedruns, go [here](https://www.speedrun.com/deadcells).
 
 To download the autosplitter manually, go [here](https://raw.githubusercontent.com/R30hedron/Dead-Cells-Autosplitter/master/DEAD_CELLS.asl), right-click, and save as. Otherwise, enable the autosplitter through the splits editor in livesplit.
 
