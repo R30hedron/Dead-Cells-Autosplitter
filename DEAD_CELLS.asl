@@ -1,4 +1,4 @@
-/* Dead Cells Autosplitter (29-JAN-2021)
+/* Dead Cells Autosplitter (31-MAR-2021)
  * Maintained by R30hedron (@R30hedron#9520 on Discord)
  * Special thanks to Mintys (@Minty#4831) and Blargel (@Blargel#0213) for previously creating/maintaining the autosplitter.
  * Thanks to Midknight13 (@Midknight13#3966) for verifying GOG version addresses
@@ -13,6 +13,7 @@
  *     Steam v. 20.8
  *     Steam v. 21.5
  *     Steam v. 22.0
+ *     Steam v. 23.8
  *
  *     GOG   v. 17.1
  */
@@ -30,6 +31,7 @@
   * 2) Add a new state, following the conventions below.
   * 3) Calculate the MD5 hashes for the version's deadcells.exe and deadcells_gl.exe and
   *    add them to the switch cases in the init function
+  * 4) Add version number to list above
   */
 
 state("deadcells", "16.2") {
@@ -130,6 +132,16 @@ state("deadcells", "22.0") {
     double   playerx : "libhl.dll", 0x49184, 0x3BC, 0x0, 0x58, 0x64, 0x208;
     double   playery : "libhl.dll", 0x49184, 0x3BC, 0x0, 0x58, 0x64, 0x210;
     int      health  : "libhl.dll", 0x49184, 0x3BC, 0x0, 0x58, 0x64, 0xFC;
+}
+
+state("deadcells", "23.8") {
+    string10 stage   : "discord.hdll", 0x1574, 0x1C;
+    double   time    : "libhl.dll", 0x49184, 0x3B4, 0x0, 0x58, 0x5C, 0x20;
+    int      control : "libhl.dll", 0x49184, 0x3B4, 0x0, 0x58, 0x68, 0x104, 0xA0;
+    double   headx   : "libhl.dll", 0x49184, 0x3B4, 0x0, 0x58, 0x68, 0x104, 0xA0, 0x208;
+    double   playerx : "libhl.dll", 0x49184, 0x3B4, 0x0, 0x58, 0x64, 0x208;
+    double   playery : "libhl.dll", 0x49184, 0x3B4, 0x0, 0x58, 0x64, 0x210;
+    int      health  : "libhl.dll", 0x49184, 0x3B4, 0x0, 0x58, 0x64, 0xFC;
 }
 
 state("deadcells", "Unknown Version") {
@@ -281,6 +293,10 @@ init
         case "58BEAB263FFE1BDE26161C8743083466": //22.0
         case "E8F678AED55C8F36892E38E620C5A09E": //22.0_gl
             version = "22.0";
+            break;
+        case "3D7DD501610C37672FEDBDEDEFD78989": //23.8
+        case "25C6EB4748D31401E01BD0B7EDE2491E": //23.8_gl
+            version = "23.8";
             break;
         default:
             version = "Unknown Version";
