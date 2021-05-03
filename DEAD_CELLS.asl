@@ -1,5 +1,5 @@
-/* Dead Cells Autosplitter (31-MAR-2021)
- * Maintained by R30hedron (@R30hedron#9520 on Discord)
+/* Dead Cells Autosplitter (05-03-2021)
+ * Maintained by R30hedron (@R30hedron#9520 on Discord) and once by Evian (Evian#6930 on Discord)
  * Special thanks to Mintys (@Minty#4831) and Blargel (@Blargel#0213) for previously creating/maintaining the autosplitter.
  * Thanks to Midknight13 (@Midknight13#3966) for verifying GOG version addresses
  * 
@@ -135,6 +135,16 @@ state("deadcells", "22.0") {
 }
 
 state("deadcells", "23.8") {
+    string10 stage   : "discord.hdll", 0x1574, 0x1C;
+    double   time    : "libhl.dll", 0x49184, 0x3B4, 0x0, 0x58, 0x5C, 0x20;
+    int      control : "libhl.dll", 0x49184, 0x3B4, 0x0, 0x58, 0x68, 0x104, 0xA0;
+    double   headx   : "libhl.dll", 0x49184, 0x3B4, 0x0, 0x58, 0x68, 0x104, 0xA0, 0x208;
+    double   playerx : "libhl.dll", 0x49184, 0x3B4, 0x0, 0x58, 0x64, 0x208;
+    double   playery : "libhl.dll", 0x49184, 0x3B4, 0x0, 0x58, 0x64, 0x210;
+    int      health  : "libhl.dll", 0x49184, 0x3B4, 0x0, 0x58, 0x64, 0xFC;
+}
+
+state("deadcells", "23.9") {
     string10 stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x49184, 0x3B4, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x49184, 0x3B4, 0x0, 0x58, 0x68, 0x104, 0xA0;
@@ -298,6 +308,8 @@ init
         case "25C6EB4748D31401E01BD0B7EDE2491E": //23.8_gl
             version = "23.8";
             break;
+        case "58BEAB263FFE1BDE26161C8743083466": //23.9
+        case "E8F678AED55C8F36892E38E620C5A09E": //23.9_gl
         default:
             version = "Unknown Version";
             MessageBox.Show(timer.Form,
