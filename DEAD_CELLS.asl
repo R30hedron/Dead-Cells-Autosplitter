@@ -14,6 +14,7 @@
  *     Steam v. 21.5
  *     Steam v. 22.0
  *     Steam v. 23.8
+ *     Steam v. 23.9
  *
  *     GOG   v. 17.1
  */
