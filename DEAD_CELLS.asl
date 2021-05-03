@@ -309,8 +309,8 @@ init
         case "25C6EB4748D31401E01BD0B7EDE2491E": //23.8_gl
             version = "23.8";
             break;
-        case "58BEAB263FFE1BDE26161C8743083466": //23.9
-        case "E8F678AED55C8F36892E38E620C5A09E": //23.9_gl
+        case "E31E422C84F968475715489AED00871D": //23.9
+        case "8D1D8E36F790FB2869655F17957DCCBC": //23.9_gl
             version = "23.9";
             break;
         default:
