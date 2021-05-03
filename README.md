@@ -16,6 +16,8 @@ This autosplitter supports the following versions of Dead Cells:
     * 20.8 (2020-08-19 8d2aadf5)
     * 21.5 (2020-12-23 9c5c8183)
     * 22.0 (2021-01-27 cf707ace)
+    * 23.8 (2021-03-30 44dd73cf)
+    * 23.9 (2021-04-26 fd50ccd6)
 
 * GOG
     * 17.1 (2020-02-19 df004900)
@@ -36,6 +38,7 @@ Special thanks to:
 * Mintys for the initial autosplitter
 * Blargel for previously maintaining the autosplitter.
 * Midknight13 for requesting and verifying autosplitter addresses for the GOG version.
+* Evian for adding the MD5 hashes for update 23.9
 
 Changelog: 
 * 1.1 (May-2020) Major rework of autosplitter; changed to be monolithic and much easier to update
