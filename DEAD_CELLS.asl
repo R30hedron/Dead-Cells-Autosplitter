@@ -1,20 +1,20 @@
-/* Dead Cells Autosplitter (03-MAY-2021)
- * Maintained by R30hedron (@R30hedron#9520 on Discord) and once by Evian (Evian#6930 on Discord)
+/* Dead Cells Autosplitter (12-JUN-2021)
+ * Maintained by R30hedron (@R30hedron#9520 on Discord)
  * Special thanks to Mintys (@Minty#4831) and Blargel (@Blargel#0213) for previously creating/maintaining the autosplitter.
  * Thanks to Midknight13 (@Midknight13#3966) for verifying GOG version addresses
+ * Thanks to Evian (@Evian#6930) for verifying version 23.9 addresses
  * 
  * Currently works for the following Dead Cells versions. Additional versions added by request.
- *     Steam v. 16.2
- *     Steam v. 17.1
+ *     Steam v. 16.2 (Preferred for older 5 BC runs)
+ *     Steam v. 17.1 (Preferred for older Fresh File runs)
  *     Steam v. 17.4
  *     Steam v. 18.5
  *     Steam v. 19.7
- *     Steam v. 20.7
  *     Steam v. 20.8
  *     Steam v. 21.5
  *     Steam v. 22.0
- *     Steam v. 23.8
  *     Steam v. 23.9
+ *     Steam v. 24.2 (Current Patch)
  *
  *     GOG   v. 17.1
  */
@@ -45,37 +45,7 @@ state("deadcells", "16.2") {
     int      health  : "libhl.dll", 0x49184, 0x434, 0x0, 0x58, 0x64, 0xE8;
 }
 
-state("deadcells", "17.1") {
-    string10 stage   : "discord.hdll", 0x1574, 0x1C;
-    double   time    : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x5C, 0x20;
-    int      control : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0;
-    double   headx   : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0, 0x200;
-    double   playerx : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x200;
-    double   playery : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x208;
-    int      health  : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0xE8;
-}
-
-state("deadcells", "17.1 GOG") {
-    string10 stage   : "discord.hdll", 0x1574, 0x1C;
-    double   time    : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x5C, 0x20;
-    int      control : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0;
-    double   headx   : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0, 0x200;
-    double   playerx : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x200;
-    double   playery : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x208;
-    int      health  : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0xE8;
-}
-
-state("deadcells", "17.4") {
-    string10 stage   : "discord.hdll", 0x1574, 0x1C;
-    double   time    : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x5C, 0x20;
-    int      control : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0;
-    double   headx   : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0, 0x200;
-    double   playerx : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x200;
-    double   playery : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x208;
-    int      health  : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0xE8;
-}
-
-state("deadcells", "18.5") {
+state("deadcells", "17.1, 17.4, or 18.5") {//Includes GoG 17.1
     string10 stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0;
@@ -95,17 +65,7 @@ state("deadcells", "19.7") {
     int      health  : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0xE8;
 }
 
-state("deadcells", "20.7") {
-    string10 stage   : "discord.hdll", 0x1574, 0x1C;
-    double   time    : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x5C, 0x20;
-    int      control : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xFC, 0xA0;
-    double   headx   : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xFC, 0xA0, 0x218;
-    double   playerx : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x218;
-    double   playery : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0x220;
-    int      health  : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x64, 0xF0;
-}
-
-state("deadcells", "20.8") {
+state("deadcells", "20.8") { //20.7
     string10 stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xFC, 0xA0;
@@ -135,7 +95,7 @@ state("deadcells", "22.0") {
     int      health  : "libhl.dll", 0x49184, 0x3BC, 0x0, 0x58, 0x64, 0xFC;
 }
 
-state("deadcells", "23.8") {
+state("deadcells", "23.9") { //23.8
     string10 stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x49184, 0x3B4, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x49184, 0x3B4, 0x0, 0x58, 0x68, 0x104, 0xA0;
@@ -145,25 +105,25 @@ state("deadcells", "23.8") {
     int      health  : "libhl.dll", 0x49184, 0x3B4, 0x0, 0x58, 0x64, 0xFC;
 }
 
-state("deadcells", "23.9") {
+state("deadcells", "24.2") {
     string10 stage   : "discord.hdll", 0x1574, 0x1C;
-    double   time    : "libhl.dll", 0x49184, 0x3B4, 0x0, 0x58, 0x5C, 0x20;
-    int      control : "libhl.dll", 0x49184, 0x3B4, 0x0, 0x58, 0x68, 0x104, 0xA0;
-    double   headx   : "libhl.dll", 0x49184, 0x3B4, 0x0, 0x58, 0x68, 0x104, 0xA0, 0x208;
-    double   playerx : "libhl.dll", 0x49184, 0x3B4, 0x0, 0x58, 0x64, 0x208;
-    double   playery : "libhl.dll", 0x49184, 0x3B4, 0x0, 0x58, 0x64, 0x210;
-    int      health  : "libhl.dll", 0x49184, 0x3B4, 0x0, 0x58, 0x64, 0xFC;
+    double   time    : "libhl.dll", 0x48184, 0x3B8, 0x0, 0x58, 0x5C, 0x20;
+    int      control : "libhl.dll", 0x48184, 0x3B8, 0x0, 0x58, 0x68, 0x104, 0xA0;
+    double   headx   : "libhl.dll", 0x48184, 0x3B8, 0x0, 0x58, 0x68, 0x104, 0xA0, 0x208;
+    double   playerx : "libhl.dll", 0x48184, 0x3B8, 0x0, 0x58, 0x64, 0x208;
+    double   playery : "libhl.dll", 0x48184, 0x3B8, 0x0, 0x58, 0x64, 0x210;
+    int      health  : "libhl.dll", 0x48184, 0x3B8, 0x0, 0x58, 0x64, 0xFC;
 }
 
 state("deadcells", "Unknown Version") {
     //Default to 22.0
     string10 stage   : "discord.hdll", 0x1574, 0x1C;
-    double   time    : "libhl.dll", 0x49184, 0x3BC, 0x0, 0x58, 0x5C, 0x20;
-    int      control : "libhl.dll", 0x49184, 0x3BC, 0x0, 0x58, 0x68, 0x104, 0xA0;
-    double   headx   : "libhl.dll", 0x49184, 0x3BC, 0x0, 0x58, 0x68, 0x104, 0xA0, 0x208;
-    double   playerx : "libhl.dll", 0x49184, 0x3BC, 0x0, 0x58, 0x64, 0x208;
-    double   playery : "libhl.dll", 0x49184, 0x3BC, 0x0, 0x58, 0x64, 0x210;
-    int      health  : "libhl.dll", 0x49184, 0x3BC, 0x0, 0x58, 0x64, 0xFC;
+    double   time    : "libhl.dll", 0x48184, 0x3B8, 0x0, 0x58, 0x5C, 0x20;
+    int      control : "libhl.dll", 0x48184, 0x3B8, 0x0, 0x58, 0x68, 0x104, 0xA0;
+    double   headx   : "libhl.dll", 0x48184, 0x3B8, 0x0, 0x58, 0x68, 0x104, 0xA0, 0x208;
+    double   playerx : "libhl.dll", 0x48184, 0x3B8, 0x0, 0x58, 0x64, 0x208;
+    double   playery : "libhl.dll", 0x48184, 0x3B8, 0x0, 0x58, 0x64, 0x210;
+    int      health  : "libhl.dll", 0x48184, 0x3B8, 0x0, 0x58, 0x64, 0xFC;
 }
 
 /* Variable Info
@@ -267,19 +227,13 @@ init
             break;
         case "CE5EE20A1358B472222717129B6BC130": //17.1
         case "1AF83FDD50EFDE7C235A2703C7005A51": //17.1_gl
-            version = "17.1";
-            break;
         case "CA7B1C70879BC1431C74AE914B9DDA3B": //17.4
         case "D9246EF63709168B2591B5C29CD270F7": //17.4_gl
-            version = "17.4";
-            break;
         case "B09AA0C6C1B9E323F3DF47ECC6AE40FD": //17.1 GOG
         case "86666DB94BF117E113DCC2687E619E86": //17.1_gl GOG
-            version = "17.1 GOG";
-            break;
         case "0CE0734F106EBC3DCC2AA6195B221F0F": //18.5
         case "56F5EA4738D6D01EE1D2408DBA2295B3": //18.5_gl
-            version = "18.5";
+            version = "17.1, 17.4, or 18.5";
             break;
         case "3124766B0AF66816797E8181BF4A1298": //19.7
         case "D9ADFE07B4361524E7B5727BCCAB7842": //19.7_gl
@@ -291,8 +245,6 @@ init
             break;
         case "E8C26AEEC84DFE64D30AFB25F2972C67": //20.7
         case "BE9B6159292CD054DE223E97CA746FA9": //20.7_gl
-            version = "20.7";
-            break;
         case "52852A88C226BC11CC087BAE5EA748C8": //20.8
         case "6CFE2E36EE96484A65672166341C7CCC": //20.8_gl
             version = "20.8";
@@ -307,11 +259,13 @@ init
             break;
         case "3D7DD501610C37672FEDBDEDEFD78989": //23.8
         case "25C6EB4748D31401E01BD0B7EDE2491E": //23.8_gl
-            version = "23.8";
-            break;
         case "E31E422C84F968475715489AED00871D": //23.9
         case "8D1D8E36F790FB2869655F17957DCCBC": //23.9_gl
             version = "23.9";
+            break;
+        case "B5409CCCEB559C8E6DFA2BE4AC7FB2B8": //24.2
+        case "A47D233B2815BE4E45904254A3AA292B": //24.2_gl
+            version = "24.2";
             break;
         default:
             version = "Unknown Version";
