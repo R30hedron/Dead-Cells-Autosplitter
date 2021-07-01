@@ -1,4 +1,4 @@
-/* Dead Cells Autosplitter (12-JUN-2021)
+/* Dead Cells Autosplitter (01-JUL-2021)
  * Maintained by R30hedron (@R30hedron#9520 on Discord)
  * Special thanks to Mintys (@Minty#4831) and Blargel (@Blargel#0213) for previously creating/maintaining the autosplitter.
  * Thanks to Midknight13 (@Midknight13#3966) for verifying GOG version addresses
@@ -14,7 +14,7 @@
  *     Steam v. 21.5
  *     Steam v. 22.0
  *     Steam v. 23.9
- *     Steam v. 24.2 (Current Patch)
+ *     Steam v. 24.3 (Current Patch)
  *
  *     GOG   v. 17.1
  */
@@ -105,7 +105,7 @@ state("deadcells", "23.9") { //23.8
     int      health  : "libhl.dll", 0x49184, 0x3B4, 0x0, 0x58, 0x64, 0xFC;
 }
 
-state("deadcells", "24.2") {
+state("deadcells", "24.3") {
     string10 stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x48184, 0x3B8, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x48184, 0x3B8, 0x0, 0x58, 0x68, 0x104, 0xA0;
@@ -116,7 +116,7 @@ state("deadcells", "24.2") {
 }
 
 state("deadcells", "Unknown Version") {
-    //Default to 22.0
+    //Default to 24.3
     string10 stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x48184, 0x3B8, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x48184, 0x3B8, 0x0, 0x58, 0x68, 0x104, 0xA0;
@@ -265,7 +265,9 @@ init
             break;
         case "B5409CCCEB559C8E6DFA2BE4AC7FB2B8": //24.2
         case "A47D233B2815BE4E45904254A3AA292B": //24.2_gl
-            version = "24.2";
+        case "6789DF62008784E7D883E6CDEA6D3BFA": //24.3
+        case "6DF010E1C7FCCDF55F47A65E7ACB1EFE": //24.3_gl
+            version = "24.3";
             break;
         default:
             version = "Unknown Version";
