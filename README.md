@@ -17,7 +17,7 @@ This autosplitter supports the following versions of Dead Cells:
     * 22.0 (2021-01-27 cf707ace)
     * 23.9 (2021-04-26 fd50ccd6)
     * 24.3 (2021-07-01 701087d1) 
-    * 25.4 (2021-09-15)
+    * 25.3 (2021-09-15 d7ad7763)
 
 * GOG
     * 17.1 (2020-02-19 df004900)
