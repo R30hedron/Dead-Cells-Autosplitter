@@ -280,8 +280,10 @@ init
         case "6DF010E1C7FCCDF55F47A65E7ACB1EFE": //24.3_gl
             version = "24.3";
             break;
-        case "53C6C30F92AFAF958F4FBB5D0EF3FE3C": //25.4
-        case "8F4BCA2BD163F6FAF0EBAABB95A20759": //25.4_gl
+        case "53C6C30F92AFAF958F4FBB5D0EF3FE3C": //25.3
+        case "8F4BCA2BD163F6FAF0EBAABB95A20759": //25.3_gl
+        case "E9318DC2C41BD686F1373D2426AB7CC2": //25.4
+        case "6E13AFFE04DA4A96EFF21AD2D4A72FA4": //25.4_gl
             version = "25.4";
             break;
         default:
