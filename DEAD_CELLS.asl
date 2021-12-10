@@ -299,7 +299,9 @@ init
             break;
             case "9FC4601B85490E38588F7C4CB47CED6E": //26.0
             case "69CCBF467A0A5C520CE2177175750C9C": //26.0_gl
-            version = "26.0";
+            case "F2B5DDF1E3E8DE6F78302681C0D3E72A": //26.1
+            case "911FDEBACFF3597D3431DAECECADCF2C": //26.1
+            version = "26.1";
             break;
         default:
             version = "Unknown Version";
