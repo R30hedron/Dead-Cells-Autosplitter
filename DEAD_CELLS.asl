@@ -1,4 +1,4 @@
-/* Dead Cells Autosplitter (15-SEP-2021)
+/* Dead Cells Autosplitter (11-DEC-2021)
  * Maintained by R30hedron (@R30hedron#9520 on Discord)
  * Special thanks to Mintys (@Minty#4831) and Blargel (@Blargel#0213) for previously creating/maintaining the autosplitter.
  * Thanks to Midknight13 (@Midknight13#3966) for verifying GOG version addresses
@@ -127,7 +127,7 @@ state("deadcells", "25.4") {
     int      health  : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x64, 0xFC;
 }
 
-state("deadcells", "26.0") {
+state("deadcells", "26.1") {
     string10 stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x48184, 0x434, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x48184, 0x434, 0x0, 0x58, 0x68, 0x108, 0xA0;
