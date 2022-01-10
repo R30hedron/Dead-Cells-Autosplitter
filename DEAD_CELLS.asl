@@ -1,4 +1,4 @@
-/* Dead Cells Autosplitter (11-DEC-2021)
+/* Dead Cells Autosplitter (10-JAN-2022)
  * Maintained by R30hedron (@R30hedron#9520 on Discord)
  * Special thanks to Mintys (@Minty#4831) and Blargel (@Blargel#0213) for previously creating/maintaining the autosplitter.
  * Thanks to Midknight13 (@Midknight13#3966) for verifying GOG version addresses
@@ -382,6 +382,7 @@ split
     //Check if player loses control in Throne Room and head x coord is different from beheaded x coord
     var exitFountain  = vars.throne.Contains(current.stage) && 
                         old.headx > 2020 && //Check if head is far enough to the right
+                        old.headx < 2230 && //Check if head is far enough to the left; prevent splits on 5BC door
                         current.playerx > 1495 && //Failsafe to ensure player is to the right of the arena
                         old.control != 0 && current.control == 0;
     
