@@ -388,6 +388,7 @@ split
     
     //Check if player loses control in Observatory during final cutscene
     var killCollector = vars.observatory.Contains(current.stage) &&
+                        old.playery < 1100 && //Check if player was still in the final areana location
                         current.playery < 1100 && //Check if player is in the final areana location
                         current.health != 0 && //Check if player is not dead
                         old.control != 0 && current.control == 0;
