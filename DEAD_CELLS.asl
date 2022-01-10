@@ -16,7 +16,8 @@
  *     Steam v. 23.9
  *     Steam v. 24.3 
  *     Steam v. 25.4
- *     Steam v. 26.0 (Current Patch)
+ *     Steam v. 26.0
+ *     Steam v. 27.0 (Current Patch)
  *
  *     GOG   v. 17.1
  */
@@ -137,8 +138,18 @@ state("deadcells", "26.1") {
     int      health  : "libhl.dll", 0x48184, 0x434, 0x0, 0x58, 0x64, 0xFC;
 }
 
+state("deadcells", "27.0") {
+    string10 stage   : "discord.hdll", 0x1574, 0x1C;
+    double   time    : "libhl.dll", 0x48184, 0x420, 0x0, 0x58, 0x5C, 0x20;
+    int      control : "libhl.dll", 0x48184, 0x420, 0x0, 0x58, 0x68, 0x10C, 0xA0;
+    double   headx   : "libhl.dll", 0x48184, 0x420, 0x0, 0x58, 0x68, 0x10C, 0xA0, 0x208;
+    double   playerx : "libhl.dll", 0x48184, 0x420, 0x0, 0x58, 0x64, 0x208;
+    double   playery : "libhl.dll", 0x48184, 0x420, 0x0, 0x58, 0x64, 0x210;
+    int      health  : "libhl.dll", 0x48184, 0x420, 0x0, 0x58, 0x64, 0xFC;
+}
+
 state("deadcells", "Unknown Version") {
-    //Default to 26.0
+    //Default to 27.x
     string10 stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x48184, 0x434, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x48184, 0x434, 0x0, 0x58, 0x68, 0x108, 0xA0;
@@ -302,11 +313,14 @@ init
         case "6E13AFFE04DA4A96EFF21AD2D4A72FA4": //25.4_gl
             version = "25.4";
             break;
-            case "9FC4601B85490E38588F7C4CB47CED6E": //26.0
-            case "69CCBF467A0A5C520CE2177175750C9C": //26.0_gl
-            case "F2B5DDF1E3E8DE6F78302681C0D3E72A": //26.1
-            case "911FDEBACFF3597D3431DAECECADCF2C": //26.1
+        case "9FC4601B85490E38588F7C4CB47CED6E": //26.0
+        case "69CCBF467A0A5C520CE2177175750C9C": //26.0_gl
+        case "F2B5DDF1E3E8DE6F78302681C0D3E72A": //26.1
+        case "911FDEBACFF3597D3431DAECECADCF2C": //26.1_gl
             version = "26.1";
+            break;
+        case "58A4E85AA72B53E7F86E84DDA6C98747": //27.0
+            version = "27.0";
             break;
         default:
             version = "Unknown Version";
