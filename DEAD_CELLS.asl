@@ -5,8 +5,8 @@
  * Thanks to Evian (@Evian#6930) for verifying version 23.9 addresses
  * 
  * Currently works for the following Dead Cells versions. Additional versions added by request.
- *     Steam v. 16.2 (Preferred for older 5 BC runs)
- *     Steam v. 17.1 (Preferred for older Fresh File runs)
+ *     Steam v. 16.2
+ *     Steam v. 17.1
  *     Steam v. 17.4
  *     Steam v. 18.5
  *     Steam v. 19.7
@@ -260,63 +260,43 @@ init
     switch (MD5Hash)
     {
         case "44775C673E44220D82B54A43DDE45606": //16.2
-        case "7C89DD5B7AFDD68F60ACFF657C65E261": //16.2_gl
             version = "16.2";
             break;
         case "CE5EE20A1358B472222717129B6BC130": //17.1
-        case "1AF83FDD50EFDE7C235A2703C7005A51": //17.1_gl
         case "CA7B1C70879BC1431C74AE914B9DDA3B": //17.4
-        case "D9246EF63709168B2591B5C29CD270F7": //17.4_gl
         case "B09AA0C6C1B9E323F3DF47ECC6AE40FD": //17.1 GOG
-        case "86666DB94BF117E113DCC2687E619E86": //17.1_gl GOG
         case "0CE0734F106EBC3DCC2AA6195B221F0F": //18.5
-        case "56F5EA4738D6D01EE1D2408DBA2295B3": //18.5_gl
             version = "17.1, 17.4, or 18.5";
             break;
         case "3124766B0AF66816797E8181BF4A1298": //19.7
-        case "D9ADFE07B4361524E7B5727BCCAB7842": //19.7_gl
         case "26FC75193F4B530DE0AE7082F9C7E32E": //19.7 hotfix
-        case "04D91182EF920120267DEF438F6BDE1C": //19.7_gl hotfix
         case "2374914D7B73B09EDDDD21778F0DBF07": //19.7 hotfix 2
-        case "EE243B6BDE53A0D8EE6EBB4265B2B692": //19.7_gl hotfix 2
             version = "19.7";
             break;
         case "E8C26AEEC84DFE64D30AFB25F2972C67": //20.7
-        case "BE9B6159292CD054DE223E97CA746FA9": //20.7_gl
         case "52852A88C226BC11CC087BAE5EA748C8": //20.8
-        case "6CFE2E36EE96484A65672166341C7CCC": //20.8_gl
             version = "20.8";
             break;
         case "B3645A26A4F1D72080269719B927E0CE": //21.5
-        case "5D62B02629585DF0BC3FB49B28B4E53C": //21.5_gl
             version = "21.5";
             break;
         case "58BEAB263FFE1BDE26161C8743083466": //22.0
-        case "E8F678AED55C8F36892E38E620C5A09E": //22.0_gl
             version = "22.0";
             break;
         case "3D7DD501610C37672FEDBDEDEFD78989": //23.8
-        case "25C6EB4748D31401E01BD0B7EDE2491E": //23.8_gl
         case "E31E422C84F968475715489AED00871D": //23.9
-        case "8D1D8E36F790FB2869655F17957DCCBC": //23.9_gl
             version = "23.9";
             break;
         case "B5409CCCEB559C8E6DFA2BE4AC7FB2B8": //24.2
-        case "A47D233B2815BE4E45904254A3AA292B": //24.2_gl
         case "6789DF62008784E7D883E6CDEA6D3BFA": //24.3
-        case "6DF010E1C7FCCDF55F47A65E7ACB1EFE": //24.3_gl
             version = "24.3";
             break;
         case "53C6C30F92AFAF958F4FBB5D0EF3FE3C": //25.3
-        case "8F4BCA2BD163F6FAF0EBAABB95A20759": //25.3_gl
         case "E9318DC2C41BD686F1373D2426AB7CC2": //25.4
-        case "6E13AFFE04DA4A96EFF21AD2D4A72FA4": //25.4_gl
             version = "25.4";
             break;
         case "9FC4601B85490E38588F7C4CB47CED6E": //26.0
-        case "69CCBF467A0A5C520CE2177175750C9C": //26.0_gl
         case "F2B5DDF1E3E8DE6F78302681C0D3E72A": //26.1
-        case "911FDEBACFF3597D3431DAECECADCF2C": //26.1_gl
             version = "26.1";
             break;
         case "58A4E85AA72B53E7F86E84DDA6C98747": //27.0
