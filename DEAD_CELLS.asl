@@ -207,6 +207,11 @@ startup
         "Observatoi", // French
       //"Observator"  //Spanish
     };
+    vars.crown = new List<string> {
+        "The Crown",
+        "La Couronne", // French
+        "La corona"  //Spanish
+    };
     
     settings.Add("enter", false, "Split on entering transition");
     settings.SetToolTip("enter", "Enable splits on entering \"Passage to\" areas.");
@@ -392,9 +397,15 @@ split
                         current.playery < 1100 && //Check if player is in the final areana location
                         current.health != 0 && //Check if player is not dead
                         old.control != 0 && current.control == 0;
-    
+
+    var killQueen = vars.crown.Contains(current.stage) &&
+                    old.playery < 650 &&
+                    current.playery < 650 &&
+                    current.health != 0 &&
+                    old.control != 0 && current.control == 0;
+
     var isSplit = false;
-    isSplit = enterPassage || exitPassage || exitFountain || killCollector;
+    isSplit = enterPassage || exitPassage || exitFountain || killCollector || killQueen;
     
     if (settings["debug"] && isSplit)
     {
