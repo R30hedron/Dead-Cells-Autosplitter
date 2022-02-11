@@ -295,6 +295,7 @@ init
         case "E9318DC2C41BD686F1373D2426AB7CC2": //25.4
             version = "25.4";
             break;
+        case "2D8B6EF259E1BAF4C67C1867711E3351": //26.0_PQ_WrongWarps WoOooo.
         case "9FC4601B85490E38588F7C4CB47CED6E": //26.0
         case "F2B5DDF1E3E8DE6F78302681C0D3E72A": //26.1
             version = "26.1";
