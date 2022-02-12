@@ -204,9 +204,12 @@ startup
     vars.passage = new List<string> {
         "Passage to",
         "Passageway",
+        "Path to th",
         "Passage ve", // French
         "Pasaje a l",
-        "Pasaje al "  //Spanish
+        "Chemin ver",
+        "Pasaje al ", //Spanish
+        "Camino de "
     };
     vars.throne = new List<string> {
         "Throne Roo",
