@@ -148,6 +148,17 @@ state("deadcells", "27.1") {
     int      health  : "libhl.dll", 0x48184, 0x420, 0x0, 0x58, 0x64, 0xFC;
 }
 
+state("deadcells", "28") {
+    string10 stage   : "discord.hdll", 0x1574, 0x1C;
+    double   time    : "libhl.dll", 0x48184, 0x428, 0x0, 0x58, 0x5C, 0x20;
+    int      control : "libhl.dll", 0x48184, 0x428, 0x0, 0x58, 0x68, 0x10C, 0xA0;
+    double   headx   : "libhl.dll", 0x48184, 0x428, 0x0, 0x58, 0x68, 0x10C, 0xA0, 0x208;
+    double   playerx : "libhl.dll", 0x48184, 0x428, 0x0, 0x58, 0x64, 0x208;
+    double   playery : "libhl.dll", 0x48184, 0x428, 0x0, 0x58, 0x64, 0x210;
+    int      health  : "libhl.dll", 0x48184, 0x428, 0x0, 0x58, 0x64, 0xFC;
+}
+
+
 state("deadcells", "Unknown Version") {
     //Default to 27.x
     string10 stage   : "discord.hdll", 0x1574, 0x1C;
@@ -205,11 +216,14 @@ startup
         "Passage to",
         "Passageway",
         "Path to th",
+        "Exit the B",
         "Passage ve", // French
         "Pasaje a l",
         "Chemin ver",
+        "Sortir de ",
         "Pasaje al ", //Spanish
-        "Camino de "
+        "Camino de ",
+        "Sal del ba"
     };
     vars.throne = new List<string> {
         "Throne Roo",
