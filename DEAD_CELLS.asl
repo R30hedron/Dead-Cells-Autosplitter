@@ -1,4 +1,4 @@
-/* Dead Cells Autosplitter (11-FEB-2022)
+/* Dead Cells Autosplitter (30-MAR-2022)
  * Maintained by R30hedron (@R30hedron#9520 on Discord)
  * Special thanks to Mintys (@Minty#4831) and Blargel (@Blargel#0213) for previously creating/maintaining the autosplitter.
  * Thanks to Midknight13 (@Midknight13#3966) for verifying GOG version addresses
