@@ -1,4 +1,4 @@
-/* Dead Cells Autosplitter (30-MAR-2022)
+/* Dead Cells Autosplitter (01-APR-2022)
  * Maintained by R30hedron (@R30hedron#9520 on Discord)
  * Special thanks to Mintys (@Minty#4831) and Blargel (@Blargel#0213) for previously creating/maintaining the autosplitter.
  * Thanks to Midknight13 (@Midknight13#3966) for verifying GOG version addresses
@@ -323,7 +323,8 @@ init
             version = "27.1";
             break;
         case "86BA459E2ED4653B0536AC978F9253B0": //28.0
-            version - "28.0";
+            version = "28.0";
+            break;
         default:
             version = "Unknown Version";
             MessageBox.Show(timer.Form,
