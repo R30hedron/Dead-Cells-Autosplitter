@@ -1,4 +1,4 @@
-/* Dead Cells Autosplitter (01-APR-2022)
+/* Dead Cells Autosplitter (11-APR-2022)
  * Maintained by R30hedron (@R30hedron#9520 on Discord)
  * Special thanks to Mintys (@Minty#4831) and Blargel (@Blargel#0213) for previously creating/maintaining the autosplitter.
  * Thanks to Midknight13 (@Midknight13#3966) for verifying GOG version addresses
@@ -18,7 +18,7 @@
  *     Steam v. 25.4
  *     Steam v. 26.0
  *     Steam v. 27.1
- *     Steam v. 28.0 (Current Patch)
+ *     Steam v. 28.1 (Current Patch)
  *
  *     GOG   v. 17.1
  */
@@ -149,7 +149,7 @@ state("deadcells", "27.1") {
     int      health  : "libhl.dll", 0x48184, 0x420, 0x0, 0x58, 0x64, 0xFC;
 }
 
-state("deadcells", "28.0") {
+state("deadcells", "28.1") {
     string10 stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x48184, 0x428, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x48184, 0x428, 0x0, 0x58, 0x68, 0x10C, 0xA0;
@@ -323,7 +323,8 @@ init
             version = "27.1";
             break;
         case "86BA459E2ED4653B0536AC978F9253B0": //28.0
-            version = "28.0";
+        case "2BE4C82A88FA92299DCDFD56C7E81316": //28.1
+            version = "28.1";
             break;
         default:
             version = "Unknown Version";
