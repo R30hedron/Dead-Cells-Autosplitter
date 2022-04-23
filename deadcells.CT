@@ -11,6 +11,7 @@
         <CheatEntry>
           <ID>60</ID>
           <Description>"Stage"</Description>
+          <LastState RealAddress="56B24180"/>
           <VariableType>String</VariableType>
           <Length>11</Length>
           <Unicode>0</Unicode>
@@ -114,118 +115,6 @@
       </CheatEntries>
     </CheatEntry>
     <CheatEntry>
-      <ID>91</ID>
-      <Description>"1.8.5"</Description>
-      <Options moHideChildren="1"/>
-      <LastState Value="" RealAddress="00000000"/>
-      <GroupHeader>1</GroupHeader>
-      <CheatEntries>
-        <CheatEntry>
-          <ID>92</ID>
-          <Description>"Stage"</Description>
-          <VariableType>String</VariableType>
-          <Length>11</Length>
-          <Unicode>0</Unicode>
-          <CodePage>0</CodePage>
-          <ZeroTerminate>1</ZeroTerminate>
-          <Address>"discord.hdll"+1574</Address>
-          <Offsets>
-            <Offset>1C</Offset>
-          </Offsets>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>99</ID>
-          <Description>"Time"</Description>
-          <VariableType>Double</VariableType>
-          <Address>"libhl.dll"+00049184</Address>
-          <Offsets>
-            <Offset>20</Offset>
-            <Offset>5C</Offset>
-            <Offset>58</Offset>
-            <Offset>0</Offset>
-            <Offset>440</Offset>
-          </Offsets>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>94</ID>
-          <Description>"NOTE: Throne Room X Coordinate for tests is 490.8"</Description>
-          <LastState Value="" RealAddress="00000000"/>
-          <GroupHeader>1</GroupHeader>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>105</ID>
-              <Description>"Player Controlled X"</Description>
-              <VariableType>Double</VariableType>
-              <Address>"libhl.dll"+00049184</Address>
-              <Offsets>
-                <Offset>200</Offset>
-                <Offset>A0</Offset>
-                <Offset>F8</Offset>
-                <Offset>68</Offset>
-                <Offset>58</Offset>
-                <Offset>0</Offset>
-                <Offset>440</Offset>
-              </Offsets>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>106</ID>
-              <Description>"Player Controlled Y"</Description>
-              <VariableType>Double</VariableType>
-              <Address>"libhl.dll"+00049184</Address>
-              <Offsets>
-                <Offset>208</Offset>
-                <Offset>A0</Offset>
-                <Offset>F8</Offset>
-                <Offset>68</Offset>
-                <Offset>58</Offset>
-                <Offset>0</Offset>
-                <Offset>440</Offset>
-              </Offsets>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>97</ID>
-              <Description>"Beheaded X"</Description>
-              <VariableType>Double</VariableType>
-              <Address>"libhl.dll"+00049184</Address>
-              <Offsets>
-                <Offset>200</Offset>
-                <Offset>64</Offset>
-                <Offset>58</Offset>
-                <Offset>0</Offset>
-                <Offset>440</Offset>
-              </Offsets>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>98</ID>
-              <Description>"Beheaded Y"</Description>
-              <VariableType>Double</VariableType>
-              <Address>"libhl.dll"+00049184</Address>
-              <Offsets>
-                <Offset>208</Offset>
-                <Offset>64</Offset>
-                <Offset>58</Offset>
-                <Offset>0</Offset>
-                <Offset>440</Offset>
-              </Offsets>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>113</ID>
-          <Description>"Health"</Description>
-          <VariableType>4 Bytes</VariableType>
-          <Address>"libhl.dll"+00049184</Address>
-          <Offsets>
-            <Offset>E8</Offset>
-            <Offset>64</Offset>
-            <Offset>58</Offset>
-            <Offset>0</Offset>
-            <Offset>440</Offset>
-          </Offsets>
-        </CheatEntry>
-      </CheatEntries>
-    </CheatEntry>
-    <CheatEntry>
       <ID>115</ID>
       <Description>"1.7.1 GOG"</Description>
       <Options moHideChildren="1"/>
@@ -235,6 +124,7 @@
         <CheatEntry>
           <ID>116</ID>
           <Description>"Stage"</Description>
+          <LastState RealAddress="56B24180"/>
           <VariableType>String</VariableType>
           <Length>11</Length>
           <Unicode>0</Unicode>
@@ -338,6 +228,119 @@
       </CheatEntries>
     </CheatEntry>
     <CheatEntry>
+      <ID>91</ID>
+      <Description>"1.8.5"</Description>
+      <Options moHideChildren="1"/>
+      <LastState Value="" RealAddress="00000000"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>92</ID>
+          <Description>"Stage"</Description>
+          <LastState RealAddress="56B24180"/>
+          <VariableType>String</VariableType>
+          <Length>11</Length>
+          <Unicode>0</Unicode>
+          <CodePage>0</CodePage>
+          <ZeroTerminate>1</ZeroTerminate>
+          <Address>"discord.hdll"+1574</Address>
+          <Offsets>
+            <Offset>1C</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>99</ID>
+          <Description>"Time"</Description>
+          <VariableType>Double</VariableType>
+          <Address>"libhl.dll"+00049184</Address>
+          <Offsets>
+            <Offset>20</Offset>
+            <Offset>5C</Offset>
+            <Offset>58</Offset>
+            <Offset>0</Offset>
+            <Offset>440</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>94</ID>
+          <Description>"NOTE: Throne Room X Coordinate for tests is 490.8"</Description>
+          <LastState Value="" RealAddress="00000000"/>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>105</ID>
+              <Description>"Player Controlled X"</Description>
+              <VariableType>Double</VariableType>
+              <Address>"libhl.dll"+00049184</Address>
+              <Offsets>
+                <Offset>200</Offset>
+                <Offset>A0</Offset>
+                <Offset>F8</Offset>
+                <Offset>68</Offset>
+                <Offset>58</Offset>
+                <Offset>0</Offset>
+                <Offset>440</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>106</ID>
+              <Description>"Player Controlled Y"</Description>
+              <VariableType>Double</VariableType>
+              <Address>"libhl.dll"+00049184</Address>
+              <Offsets>
+                <Offset>208</Offset>
+                <Offset>A0</Offset>
+                <Offset>F8</Offset>
+                <Offset>68</Offset>
+                <Offset>58</Offset>
+                <Offset>0</Offset>
+                <Offset>440</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>97</ID>
+              <Description>"Beheaded X"</Description>
+              <VariableType>Double</VariableType>
+              <Address>"libhl.dll"+00049184</Address>
+              <Offsets>
+                <Offset>200</Offset>
+                <Offset>64</Offset>
+                <Offset>58</Offset>
+                <Offset>0</Offset>
+                <Offset>440</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>98</ID>
+              <Description>"Beheaded Y"</Description>
+              <VariableType>Double</VariableType>
+              <Address>"libhl.dll"+00049184</Address>
+              <Offsets>
+                <Offset>208</Offset>
+                <Offset>64</Offset>
+                <Offset>58</Offset>
+                <Offset>0</Offset>
+                <Offset>440</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>113</ID>
+          <Description>"Health"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"libhl.dll"+00049184</Address>
+          <Offsets>
+            <Offset>E8</Offset>
+            <Offset>64</Offset>
+            <Offset>58</Offset>
+            <Offset>0</Offset>
+            <Offset>440</Offset>
+          </Offsets>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
       <ID>124</ID>
       <Description>"1.9.7"</Description>
       <Options moHideChildren="1"/>
@@ -347,6 +350,7 @@
         <CheatEntry>
           <ID>125</ID>
           <Description>"Stage"</Description>
+          <LastState RealAddress="56B24180"/>
           <VariableType>String</VariableType>
           <Length>11</Length>
           <Unicode>0</Unicode>
@@ -472,6 +476,7 @@
         <CheatEntry>
           <ID>135</ID>
           <Description>"Stage"</Description>
+          <LastState RealAddress="56B24180"/>
           <VariableType>String</VariableType>
           <Length>11</Length>
           <Unicode>0</Unicode>
@@ -597,6 +602,7 @@
         <CheatEntry>
           <ID>145</ID>
           <Description>"Stage"</Description>
+          <LastState RealAddress="56B24180"/>
           <VariableType>String</VariableType>
           <Length>11</Length>
           <Unicode>0</Unicode>
@@ -722,6 +728,7 @@
         <CheatEntry>
           <ID>155</ID>
           <Description>"Stage"</Description>
+          <LastState RealAddress="56B24180"/>
           <VariableType>String</VariableType>
           <Length>11</Length>
           <Unicode>0</Unicode>
@@ -847,6 +854,7 @@
         <CheatEntry>
           <ID>165</ID>
           <Description>"Stage"</Description>
+          <LastState RealAddress="56B24180"/>
           <VariableType>String</VariableType>
           <Length>11</Length>
           <Unicode>0</Unicode>
@@ -972,6 +980,7 @@
         <CheatEntry>
           <ID>175</ID>
           <Description>"Stage"</Description>
+          <LastState RealAddress="56B24180"/>
           <VariableType>String</VariableType>
           <Length>11</Length>
           <Unicode>0</Unicode>
@@ -1097,6 +1106,7 @@
         <CheatEntry>
           <ID>185</ID>
           <Description>"Stage"</Description>
+          <LastState RealAddress="56B24180"/>
           <VariableType>String</VariableType>
           <Length>11</Length>
           <Unicode>0</Unicode>
@@ -1222,6 +1232,7 @@
         <CheatEntry>
           <ID>195</ID>
           <Description>"Stage"</Description>
+          <LastState RealAddress="56B24180"/>
           <VariableType>String</VariableType>
           <Length>11</Length>
           <Unicode>0</Unicode>
@@ -1235,6 +1246,7 @@
         <CheatEntry>
           <ID>196</ID>
           <Description>"Time"</Description>
+          <LastState Value="1.14349851143828E-242" RealAddress="0DB38198"/>
           <VariableType>Double</VariableType>
           <Address>"libhl.dll"+00048184</Address>
           <Offsets>
@@ -1248,6 +1260,7 @@
         <CheatEntry>
           <ID>197</ID>
           <Description>"Seed"</Description>
+          <LastState Value="115756348" RealAddress="0DB3817C"/>
           <VariableType>4 Bytes</VariableType>
           <Address>"libhl.dll"+00048184</Address>
           <Offsets>
@@ -1297,6 +1310,7 @@
             <CheatEntry>
               <ID>201</ID>
               <Description>"Beheaded X"</Description>
+              <LastState Value="0" RealAddress="06F0C1FC"/>
               <VariableType>Double</VariableType>
               <Address>"libhl.dll"+00048184</Address>
               <Offsets>
@@ -1310,6 +1324,7 @@
             <CheatEntry>
               <ID>202</ID>
               <Description>"Beheaded Y"</Description>
+              <LastState Value="3.02524317830995E-275" RealAddress="06F0C204"/>
               <VariableType>Double</VariableType>
               <Address>"libhl.dll"+00048184</Address>
               <Offsets>
@@ -1325,6 +1340,7 @@
         <CheatEntry>
           <ID>203</ID>
           <Description>"Health"</Description>
+          <LastState Value="0" RealAddress="06F0C0F0"/>
           <VariableType>4 Bytes</VariableType>
           <Address>"libhl.dll"+00048184</Address>
           <Offsets>
@@ -1341,12 +1357,13 @@
       <ID>205</ID>
       <Description>"2.7.0"</Description>
       <Options moHideChildren="1"/>
-      <LastState Value="" Activated="1" RealAddress="00000000"/>
+      <LastState Value="" RealAddress="00000000"/>
       <GroupHeader>1</GroupHeader>
       <CheatEntries>
         <CheatEntry>
           <ID>206</ID>
           <Description>"Stage"</Description>
+          <LastState RealAddress="56B24180"/>
           <VariableType>String</VariableType>
           <Length>11</Length>
           <Unicode>0</Unicode>
@@ -1360,6 +1377,7 @@
         <CheatEntry>
           <ID>207</ID>
           <Description>"Time"</Description>
+          <LastState Value="9.09955748880491E-243" RealAddress="0DAF10B8"/>
           <VariableType>Double</VariableType>
           <Address>"libhl.dll"+00048184</Address>
           <Offsets>
@@ -1373,6 +1391,7 @@
         <CheatEntry>
           <ID>208</ID>
           <Description>"Seed"</Description>
+          <LastState Value="115797532" RealAddress="0DAF109C"/>
           <VariableType>4 Bytes</VariableType>
           <Address>"libhl.dll"+00048184</Address>
           <Offsets>
@@ -1422,6 +1441,7 @@
             <CheatEntry>
               <ID>212</ID>
               <Description>"Beheaded X"</Description>
+              <LastState Value="9.10020090993725E-243" RealAddress="06FB1488"/>
               <VariableType>Double</VariableType>
               <Address>"libhl.dll"+00048184</Address>
               <Offsets>
@@ -1435,6 +1455,7 @@
             <CheatEntry>
               <ID>213</ID>
               <Description>"Beheaded Y"</Description>
+              <LastState Value="2.00629002567587E-275" RealAddress="06FB1490"/>
               <VariableType>Double</VariableType>
               <Address>"libhl.dll"+00048184</Address>
               <Offsets>
@@ -1450,6 +1471,7 @@
         <CheatEntry>
           <ID>214</ID>
           <Description>"Health"</Description>
+          <LastState Value="6619254" RealAddress="06FB137C"/>
           <VariableType>4 Bytes</VariableType>
           <Address>"libhl.dll"+00048184</Address>
           <Offsets>
@@ -1458,6 +1480,132 @@
             <Offset>58</Offset>
             <Offset>0</Offset>
             <Offset>420</Offset>
+          </Offsets>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>215</ID>
+      <Description>"2.8"</Description>
+      <Options moHideChildren="1"/>
+      <LastState Value="" RealAddress="00000000"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>216</ID>
+          <Description>"Stage"</Description>
+          <LastState RealAddress="56B24180"/>
+          <VariableType>String</VariableType>
+          <Length>11</Length>
+          <Unicode>0</Unicode>
+          <CodePage>0</CodePage>
+          <ZeroTerminate>1</ZeroTerminate>
+          <Address>"discord.hdll"+1574</Address>
+          <Offsets>
+            <Offset>1C</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>217</ID>
+          <Description>"Time"</Description>
+          <VariableType>Double</VariableType>
+          <Address>"libhl.dll"+00048184</Address>
+          <Offsets>
+            <Offset>20</Offset>
+            <Offset>5C</Offset>
+            <Offset>58</Offset>
+            <Offset>0</Offset>
+            <Offset>428</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>218</ID>
+          <Description>"Seed"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"libhl.dll"+00048184</Address>
+          <Offsets>
+            <Offset>4</Offset>
+            <Offset>5C</Offset>
+            <Offset>58</Offset>
+            <Offset>0</Offset>
+            <Offset>428</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>219</ID>
+          <Description>"NOTE: Throne Room X Coordinate for tests is 490.8"</Description>
+          <LastState Value="" RealAddress="00000000"/>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>220</ID>
+              <Description>"Player Controlled X"</Description>
+              <VariableType>Double</VariableType>
+              <Address>"libhl.dll"+00048184</Address>
+              <Offsets>
+                <Offset>208</Offset>
+                <Offset>A0</Offset>
+                <Offset>10C</Offset>
+                <Offset>68</Offset>
+                <Offset>58</Offset>
+                <Offset>0</Offset>
+                <Offset>428</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>221</ID>
+              <Description>"Player Controlled Y"</Description>
+              <VariableType>Double</VariableType>
+              <Address>"libhl.dll"+00048184</Address>
+              <Offsets>
+                <Offset>210</Offset>
+                <Offset>A0</Offset>
+                <Offset>10C</Offset>
+                <Offset>68</Offset>
+                <Offset>58</Offset>
+                <Offset>0</Offset>
+                <Offset>428</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>222</ID>
+              <Description>"Beheaded X"</Description>
+              <VariableType>Double</VariableType>
+              <Address>"libhl.dll"+00048184</Address>
+              <Offsets>
+                <Offset>208</Offset>
+                <Offset>64</Offset>
+                <Offset>58</Offset>
+                <Offset>0</Offset>
+                <Offset>428</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>223</ID>
+              <Description>"Beheaded Y"</Description>
+              <VariableType>Double</VariableType>
+              <Address>"libhl.dll"+00048184</Address>
+              <Offsets>
+                <Offset>210</Offset>
+                <Offset>64</Offset>
+                <Offset>58</Offset>
+                <Offset>0</Offset>
+                <Offset>428</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>224</ID>
+          <Description>"Health"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"libhl.dll"+00048184</Address>
+          <Offsets>
+            <Offset>FC</Offset>
+            <Offset>64</Offset>
+            <Offset>58</Offset>
+            <Offset>0</Offset>
+            <Offset>428</Offset>
           </Offsets>
         </CheatEntry>
       </CheatEntries>
