@@ -1,4 +1,4 @@
-/* Dead Cells Autosplitter (11-APR-2022)
+/* Dead Cells Autosplitter (22-APR-2022)
  * Maintained by R30hedron (@R30hedron#9520 on Discord)
  * Special thanks to Mintys (@Minty#4831) and Blargel (@Blargel#0213) for previously creating/maintaining the autosplitter.
  * Thanks to Midknight13 (@Midknight13#3966) for verifying GOG version addresses
@@ -209,37 +209,42 @@ startup
     
     //Localization strings
     vars.pq = new List<string> {
-        "Prisoners'",
-        "Quartier d", // French
-        "Celdas de "  // Spanish
+        "Prisoners",
+        "Quartier ", // French
+        "Celdas de", // Spanish
+        "被囚" // Chinese
     };
     vars.passage = new List<string> {
-        "Passage to",
-        "Passageway",
-        "Path to th",
-        "Exit the B",
-        "Passage ve", // French
-        "Pasaje a l",
-        "Chemin ver",
-        "Sortir de ",
-        "Pasaje al ", //Spanish
-        "Camino de ",
-        "Sal del ba"
+        "Passage t",
+        "Passagewa",
+        "Path to t",
+        "Exit the ",
+        "Passage v", // French
+        "Chemin ve",
+        "Sortir de",
+        "Pasaje al", // Spanish
+        "Pasaje a ",
+        "Camino de",
+        "Sal del b",
+        "前往", // Chinese
     };
     vars.throne = new List<string> {
-        "Throne Roo",
-        "Salle du t", // French
-        "Sala del T"  // Spanish
+        "Throne Ro",
+        "Salle du ", // French
+        "Sala del ", // Spanish
+        "王座" // Chinese
     };
     vars.observatory = new List<string> {
-        "Observator",
-        "Observatoi", // French
-      //"Observator"  //Spanish
+        "Observato",
+      //"Observato", // French
+      //"Observato", //Spanish
+        "观星" // Chinese
     };
     vars.crown = new List<string> {
         "The Crown",
-        "La Couronne", // French
-        "La corona"  //Spanish
+        "La Couron", // French
+        "La corona", //Spanish
+        "塔顶" //Chinese
     };
     
     settings.Add("enter", false, "Split on entering transition");
