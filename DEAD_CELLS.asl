@@ -40,7 +40,7 @@
   */
 
 state("deadcells", "16.2") {
-    string9 stage   : "discord.hdll", 0x1574, 0x1C;
+    string9  stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x49184, 0x434, 0x0, 0x58, 0x5C, 0x28;
     int      control : "libhl.dll", 0x49184, 0x434, 0x0, 0x58, 0x68, 0xF8, 0xA0;
     double   headx   : "libhl.dll", 0x49184, 0x434, 0x0, 0x58, 0x68, 0xF8, 0xA0, 0x200;
@@ -226,25 +226,51 @@ startup
         "Pasaje a ",
         "Camino de",
         "Sal del b",
-        "前往", // Chinese
+        "前往有", // Chinese
+        "前往猛",
+        "前往荒",
+        "前往监",
+        "前往壁",
+        "前往藏",
+        "前往旧",
+        "前往被",
+        "前往腐",
+        "前往黑",
+        "前往作",
+        "前往巢",
+        "前往雾",
+        "前往沉",
+        "前往墓",
+        "前往被",
+        "前往钟",
+        "前往山",
+        "前往时",
+        "前往守",
+        "前往废",
+        "前往王",
+        "前往观",
+        "前往崩",
+        "前往不",
+        "前往阴",
+        "前往灯"
     };
     vars.throne = new List<string> {
         "Throne Ro",
         "Salle du ", // French
         "Sala del ", // Spanish
-        "王座" // Chinese
+        "王座之" // Chinese
     };
     vars.observatory = new List<string> {
         "Observato",
       //"Observato", // French
       //"Observato", //Spanish
-        "观星" // Chinese
+        "观星台" // Chinese
     };
     vars.crown = new List<string> {
         "The Crown",
         "La Couron", // French
         "La corona", //Spanish
-        "塔顶" //Chinese
+        "塔顶" // Chinese
     };
     
     settings.Add("enter", false, "Split on entering transition");
