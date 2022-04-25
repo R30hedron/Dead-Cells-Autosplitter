@@ -225,34 +225,35 @@ startup
         "Pasaje al", // Spanish
         "Pasaje a ",
         "Camino de",
-        "Sal del b",
-        "前往有", // Chinese
-        "前往猛",
-        "前往荒",
-        "前往监",
-        "前往壁",
-        "前往藏",
-        "前往旧",
-        "前往被",
-        "前往腐",
-        "前往黑",
-        "前往作",
-        "前往巢",
-        "前往雾",
-        "前往沉",
-        "前往墓",
-        "前往被",
-        "前往钟",
-        "前往山",
-        "前往时",
-        "前往守",
-        "前往废",
-        "前往王",
-        "前往观",
-        "前往崩",
-        "前往不",
-        "前往阴",
-        "前往灯"
+        "Sal del b", // (Bank; verify with next major version)
+        "前往有", // Chinese (Prom)
+        "前往猛", // (Toxic)
+        "前往荒", // (Arbor)
+        "前往监", // (Depths)
+        "前往壁", // (Ramparts)
+        "前往藏", // (Ossuary)
+        "前往旧", // (Ancient)
+        "前往被", // (Morass)
+        "前往腐", // (Corrupted)
+        "前往黑", // (Bridge)
+        "前往作", // (Crypt)
+        "前往巢", // (Nest)
+        "前往雾", // (Stilt)
+        "前往沉", // (Sanctuary)
+        "前往墓", // (Graveyard)
+        "前往被", // (Sepulcher)
+        "前往钟", // (Clock Tower)
+        "前往山", // (Cavern / High Peak Castle)
+        "前往时", // (Clock Room)
+        "前往守", // (Guardian's)
+        "前往废", // (Distillery)
+        "前往王", // (Throne)
+        "前往观", // (Astrolab / Observatory)
+        "前往崩", // (Shrines)
+        "前往不", // (Shores)
+        "前往阴", // (Mausoleum)
+        "前往灯"  // (Lighthouse)
+                 // (Bank placeholder)
     };
     vars.throne = new List<string> {
         "Throne Ro",
