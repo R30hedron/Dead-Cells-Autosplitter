@@ -212,7 +212,7 @@ startup
         "Prisoners",
         "Quartier ", // French
         "Celdas de", // Spanish
-        "被囚" // Chinese
+        "被囚者" // Chinese
     };
     vars.passage = new List<string> {
         "Passage t",
