@@ -40,7 +40,7 @@
   */
 
 state("deadcells", "16.2") {
-    string9  stage   : "discord.hdll", 0x1574, 0x1C;
+    string6  stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x49184, 0x434, 0x0, 0x58, 0x5C, 0x28;
     int      control : "libhl.dll", 0x49184, 0x434, 0x0, 0x58, 0x68, 0xF8, 0xA0;
     double   headx   : "libhl.dll", 0x49184, 0x434, 0x0, 0x58, 0x68, 0xF8, 0xA0, 0x200;
@@ -50,7 +50,7 @@ state("deadcells", "16.2") {
 }
 
 state("deadcells", "17.1, 17.4, or 18.5") {//Includes GoG 17.1
-    string9  stage   : "discord.hdll", 0x1574, 0x1C;
+    string6  stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0;
     double   headx   : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0, 0x200;
@@ -60,7 +60,7 @@ state("deadcells", "17.1, 17.4, or 18.5") {//Includes GoG 17.1
 }
 
 state("deadcells", "19.7") {
-    string9  stage   : "discord.hdll", 0x1574, 0x1C;
+    string6  stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0;
     double   headx   : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xF8, 0xA0, 0x210;
@@ -70,7 +70,7 @@ state("deadcells", "19.7") {
 }
 
 state("deadcells", "20.8") { //20.7
-    string9  stage   : "discord.hdll", 0x1574, 0x1C;
+    string6  stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xFC, 0xA0;
     double   headx   : "libhl.dll", 0x49184, 0x440, 0x0, 0x58, 0x68, 0xFC, 0xA0, 0x218;
@@ -80,7 +80,7 @@ state("deadcells", "20.8") { //20.7
 }
 
 state("deadcells", "21.5") {
-    string9  stage   : "discord.hdll", 0x1574, 0x1C;
+    string6  stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x49184, 0x3C8, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x49184, 0x3C8, 0x0, 0x58, 0x68, 0x104, 0xA0;
     double   headx   : "libhl.dll", 0x49184, 0x3C8, 0x0, 0x58, 0x68, 0x104, 0xA0, 0x218;
@@ -90,7 +90,7 @@ state("deadcells", "21.5") {
 }
 
 state("deadcells", "22.0") {
-    string9  stage   : "discord.hdll", 0x1574, 0x1C;
+    string6  stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x49184, 0x3BC, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x49184, 0x3BC, 0x0, 0x58, 0x68, 0x104, 0xA0;
     double   headx   : "libhl.dll", 0x49184, 0x3BC, 0x0, 0x58, 0x68, 0x104, 0xA0, 0x208;
@@ -100,7 +100,7 @@ state("deadcells", "22.0") {
 }
 
 state("deadcells", "23.9") { //23.8
-    string9  stage   : "discord.hdll", 0x1574, 0x1C;
+    string6  stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x49184, 0x3B4, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x49184, 0x3B4, 0x0, 0x58, 0x68, 0x104, 0xA0;
     double   headx   : "libhl.dll", 0x49184, 0x3B4, 0x0, 0x58, 0x68, 0x104, 0xA0, 0x208;
@@ -110,7 +110,7 @@ state("deadcells", "23.9") { //23.8
 }
 
 state("deadcells", "24.3") {
-    string9  stage   : "discord.hdll", 0x1574, 0x1C;
+    string6  stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x48184, 0x3B8, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x48184, 0x3B8, 0x0, 0x58, 0x68, 0x108, 0xA0;
     double   headx   : "libhl.dll", 0x48184, 0x3B8, 0x0, 0x58, 0x68, 0x108, 0xA0, 0x208;
@@ -120,7 +120,7 @@ state("deadcells", "24.3") {
 }
 
 state("deadcells", "25.4") {
-    string9  stage   : "discord.hdll", 0x1574, 0x1C;
+    string6  stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x68, 0x108, 0xA0;
     double   headx   : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x68, 0x108, 0xA0, 0x208;
@@ -130,7 +130,7 @@ state("deadcells", "25.4") {
 }
 
 state("deadcells", "26.1") {
-    string9  stage   : "discord.hdll", 0x1574, 0x1C;
+    string6  stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x48184, 0x434, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x48184, 0x434, 0x0, 0x58, 0x68, 0x108, 0xA0;
     double   headx   : "libhl.dll", 0x48184, 0x434, 0x0, 0x58, 0x68, 0x108, 0xA0, 0x208;
@@ -140,7 +140,7 @@ state("deadcells", "26.1") {
 }
 
 state("deadcells", "27.1") {
-    string9  stage   : "discord.hdll", 0x1574, 0x1C;
+    string6  stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x48184, 0x420, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x48184, 0x420, 0x0, 0x58, 0x68, 0x10C, 0xA0;
     double   headx   : "libhl.dll", 0x48184, 0x420, 0x0, 0x58, 0x68, 0x10C, 0xA0, 0x208;
@@ -150,7 +150,7 @@ state("deadcells", "27.1") {
 }
 
 state("deadcells", "28.1") {
-    string9  stage   : "discord.hdll", 0x1574, 0x1C;
+    string6  stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x48184, 0x428, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x48184, 0x428, 0x0, 0x58, 0x68, 0x10C, 0xA0;
     double   headx   : "libhl.dll", 0x48184, 0x428, 0x0, 0x58, 0x68, 0x10C, 0xA0, 0x208;
@@ -162,7 +162,7 @@ state("deadcells", "28.1") {
 
 state("deadcells", "Unknown Version") {
     //Default to 28.x
-    string9  stage   : "discord.hdll", 0x1574, 0x1C;
+    string6  stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x48184, 0x428, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x48184, 0x428, 0x0, 0x58, 0x68, 0x10C, 0xA0;
     double   headx   : "libhl.dll", 0x48184, 0x428, 0x0, 0x58, 0x68, 0x10C, 0xA0, 0x208;
@@ -209,76 +209,47 @@ startup
     
     //Localization strings
     vars.pq = new List<string> {
-        "Prisoners", // English
-        "Quartier ", // French
-        "Celdas de", // Spanish
-        "Тюремные ", // Russian
-        "被囚者" // Chinese
+        "Prison", // English
+        "Quarti", // French
+        "Celdas", // Spanish
+        "Тюр", // Russian
+        "被囚" // Chinese
     };
     vars.passage = new List<string> {
-        "Passage t", // English
-        "Passagewa",
-        "Path to t",
-        "Exit the ",
-        "Passage v", // French
-        "Chemin ve",
-        "Sortir de",
-        "Pasaje al", // Spanish
-        "Pasaje a ",
-        "Camino de",
-        "Sal del b",
-        "Проход к ", // Russian
-        "Путь на в",
-        "Путь к ма",
-        "Покинуть ",
-        "前往有", // Chinese (Prom)
-        "前往猛", // (Toxic)
-        "前往荒", // (Arbor)
-        "前往监", // (Depths)
-        "前往壁", // (Ramparts)
-        "前往藏", // (Ossuary)
-        "前往旧", // (Ancient)
-        "前往被", // (Morass)
-        "前往腐", // (Corrupted)
-        "前往黑", // (Bridge)
-        "前往作", // (Crypt)
-        "前往巢", // (Nest)
-        "前往雾", // (Stilt)
-        "前往沉", // (Sanctuary)
-        "前往墓", // (Graveyard)
-        "前往被", // (Sepulcher)
-        "前往钟", // (Clock Tower)
-        "前往山", // (Cavern / High Peak Castle)
-        "前往时", // (Clock Room)
-        "前往守", // (Guardian's)
-        "前往废", // (Distillery)
-        "前往王", // (Throne)
-        "前往观", // (Astrolab / Observatory)
-        "前往崩", // (Shrines)
-        "前往不", // (Shores)
-        "前往阴", // (Mausoleum)
-        "前往灯", // (Lighthouse)
-        "离开银"  // (Bank)
+        "Passag", // English
+        "Path t",
+        "Exit t",
+      //"Passag", // French
+        "Chemin",
+        "Sortir",
+        "Pasaje", // Spanish
+        "Camino",
+        "Sal de",
+        "Про", // Russian
+        "Пут",
+        "Пок",
+        "前往", // Chinese
+        "离开"
     };
     vars.throne = new List<string> {
-        "Throne Ro", // English
-        "Salle du ", // French
-        "Sala del ", // Spanish
-        "Тронный з", // Russian
-        "王座之" // Chinese
+        "Throne", // English
+        "Salle ", // French
+        "Sala d", // Spanish
+        "Тро", // Russian
+        "王座" // Chinese
     };
     vars.observatory = new List<string> {
-        "Observato", // English
-      //"Observato", // French
-      //"Observato", // Spanish
-        "Обсервато", // Russian
-        "观星台" // Chinese
+        "Observ", // English
+      //"Observ", // French
+      //"Observ", // Spanish
+        "Обс", // Russian
+        "观星" // Chinese
     };
     vars.crown = new List<string> {
-        "The Crown", // English
-        "La Couron", // French
-        "La corona", // Spanish
-        "Корона",    // Russian
+        "The Cr", // English
+        "La Cou", // French
+        "La cor", // Spanish
+        "Кор",    // Russian
         "塔顶" // Chinese
     };
     
