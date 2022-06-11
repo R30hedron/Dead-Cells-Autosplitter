@@ -33,7 +33,12 @@ The following are implemented:
 * Automatic Splits
     * Includes options to split on entering transition rooms, on leaving transition rooms, or both.
 * Automatic Timer Resets
-* Support for English, French, and Spanish localizations.
+* Support for the following language localizations:
+    * English
+    * French
+    * Spanish
+    * Russian
+    * Simplified Chinese
 
 Please forward any feedback, questions, or concerns to R30hedron on Discord (@R30hedron#9529).
 
