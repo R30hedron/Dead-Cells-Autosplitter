@@ -1,4 +1,4 @@
-/* Dead Cells Autosplitter (24-APR-2022)
+/* Dead Cells Autosplitter (11-JUN-2022)
  * Maintained by R30hedron (@R30hedron#9520 on Discord)
  * Special thanks to Mintys (@Minty#4831) and Blargel (@Blargel#0213) for previously creating/maintaining the autosplitter.
  * Thanks to Midknight13 (@Midknight13#3966) for verifying GOG version addresses
@@ -209,13 +209,14 @@ startup
     
     //Localization strings
     vars.pq = new List<string> {
-        "Prisoners",
+        "Prisoners", // English
         "Quartier ", // French
         "Celdas de", // Spanish
+        "Тюремные ", // Russian
         "被囚者" // Chinese
     };
     vars.passage = new List<string> {
-        "Passage t",
+        "Passage t", // English
         "Passagewa",
         "Path to t",
         "Exit the ",
@@ -225,7 +226,11 @@ startup
         "Pasaje al", // Spanish
         "Pasaje a ",
         "Camino de",
-        "Sal del b", // (Bank; verify with next major version)
+        "Sal del b",
+        "Проход к ", // Russian
+        "Путь на в",
+        "Путь к ма",
+        "Покинуть ",
         "前往有", // Chinese (Prom)
         "前往猛", // (Toxic)
         "前往荒", // (Arbor)
@@ -252,25 +257,28 @@ startup
         "前往崩", // (Shrines)
         "前往不", // (Shores)
         "前往阴", // (Mausoleum)
-        "前往灯"  // (Lighthouse)
-                 // (Bank placeholder)
+        "前往灯", // (Lighthouse)
+        "离开银"  // (Bank)
     };
     vars.throne = new List<string> {
-        "Throne Ro",
+        "Throne Ro", // English
         "Salle du ", // French
         "Sala del ", // Spanish
+        "Тронный з", // Russian
         "王座之" // Chinese
     };
     vars.observatory = new List<string> {
-        "Observato",
+        "Observato", // English
       //"Observato", // French
-      //"Observato", //Spanish
+      //"Observato", // Spanish
+        "Обсервато", // Russian
         "观星台" // Chinese
     };
     vars.crown = new List<string> {
-        "The Crown",
+        "The Crown", // English
         "La Couron", // French
-        "La corona", //Spanish
+        "La corona", // Spanish
+        "Корона",    // Russian
         "塔顶" // Chinese
     };
     
