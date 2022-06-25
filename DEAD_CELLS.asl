@@ -1,4 +1,4 @@
-/* Dead Cells Autosplitter (23-JUN-2022)
+/* Dead Cells Autosplitter (25-JUN-2022)
  * Maintained by R30hedron (@R30hedron#9520 on Discord)
  * Special thanks to Mintys (@Minty#4831) and Blargel (@Blargel#0213) for previously creating/maintaining the autosplitter.
  * Thanks to Midknight13 (@Midknight13#3966) for verifying GOG version addresses
@@ -348,6 +348,9 @@ init
         case "2BE4C82A88FA92299DCDFD56C7E81316": //28.1
         case "FC40A5399202FD1A1F4455A2E18CC123": //28.1 hotfix?
             version = "28.1";
+            break;
+        case "62A0676829E73C7E770D08D3FEF80E04": //29.2
+            version = "29.2";
             break;
         default:
             version = "Unknown Version";
