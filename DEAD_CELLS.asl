@@ -432,11 +432,13 @@ split
     	exitPassage  = current.stage != old.stage && vars.passage.Contains(old.stage);
     }
     
+    var exitFountain = false;
+    
     if (settings["testing"])
     {
 
     //Check if player loses control in Throne Room and head x coord is different from beheaded x coord
-    var exitFountain  = vars.throne.Contains(current.stage) && 
+    exitFountain  = vars.throne.Contains(current.stage) && 
                         old.headx > 1960 && //Check if head is far enough to the right
                         old.headx < 2390 && //Check if head is far enough to the left; prevent splits on 5BC door
                         current.playerx > 1460 && //Failsafe to ensure player is to the right of the arena
@@ -447,7 +449,7 @@ split
     {
     
     //Check if player loses control in Throne Room and head x coord is different from beheaded x coord
-    var exitFountain  = vars.throne.Contains(current.stage) && 
+    exitFountain  = vars.throne.Contains(current.stage) && 
                         old.headx > 2020 && //Check if head is far enough to the right
                         old.headx < 2230 && //Check if head is far enough to the left; prevent splits on 5BC door
                         current.playerx > 1495 && //Failsafe to ensure player is to the right of the arena
