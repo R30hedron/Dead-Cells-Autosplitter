@@ -273,6 +273,10 @@ startup
     settings.Add("debug", false, "Print debug statements");
     settings.SetToolTip("debug", "Prints debug statements to console; can be viewed through DebugView.\n"
                                + "You should only enable this if you are helping to debug the autosplitter.");
+    settings.Add("testing", false, "Experimental Bugfixes");
+    settings.SetToolTip("testing", "Changes some of the autosplitter's internals to test new changes.\n"
+                              + "Only enable this if R30hedron specifically asks you to to test a bug fix.\n"
+                              + "Currently testing: end of Throne Room split after HotK fight for 0-5BC.");
 }
 
 init
@@ -427,13 +431,29 @@ split
     {
     	exitPassage  = current.stage != old.stage && vars.passage.Contains(old.stage);
     }
+    
+    if (settings["testing"])
+    {
 
+    //Check if player loses control in Throne Room and head x coord is different from beheaded x coord
+    var exitFountain  = vars.throne.Contains(current.stage) && 
+                        old.headx > 1960 && //Check if head is far enough to the right
+                        old.headx < 2390 && //Check if head is far enough to the left; prevent splits on 5BC door
+                        current.playerx > 1460 && //Failsafe to ensure player is to the right of the arena
+                        old.control != 0 && current.control == 0;
+                        
+    }
+    else
+    {
+    
     //Check if player loses control in Throne Room and head x coord is different from beheaded x coord
     var exitFountain  = vars.throne.Contains(current.stage) && 
                         old.headx > 2020 && //Check if head is far enough to the right
                         old.headx < 2230 && //Check if head is far enough to the left; prevent splits on 5BC door
                         current.playerx > 1495 && //Failsafe to ensure player is to the right of the arena
                         old.control != 0 && current.control == 0;
+                        
+    }
     
     //Check if player loses control in Observatory during final cutscene
     var killCollector = vars.observatory.Contains(current.stage) &&
