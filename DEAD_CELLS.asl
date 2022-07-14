@@ -211,8 +211,10 @@ gameTime {
     {
         return TimeSpan.FromSeconds(vars.igt);
     }
-    
-    return TimeSpan.FromSeconds(current.time);
+    else
+    {
+        return TimeSpan.FromSeconds(current.time);
+    }
 }
 
 isLoading {
