@@ -206,6 +206,12 @@ state("deadcells", "Unknown Version") {
 gameTime {
     //runs at all times when the timer is running.
     //returns in-game time
+    
+    if (settings["igtreset"])
+    {
+        return TimeSpan.FromSeconds(vars.igt);
+    }
+    
     return TimeSpan.FromSeconds(current.time);
 }
 
@@ -264,6 +270,9 @@ startup
         "塔顶" // Chinese
     };
     
+    //autosplitter variable for additive in-game time
+    vars.igt = 0f;
+    
     settings.Add("enter", false, "Split on entering transition");
     settings.SetToolTip("enter", "Enable splits on entering \"Passage to\" areas.");
     
@@ -275,8 +284,14 @@ startup
                                + "You should only enable this if you are helping to debug the autosplitter.");
     settings.Add("testing", false, "Experimental Bugfixes");
     settings.SetToolTip("testing", "Changes some of the autosplitter's internals to test new changes.\n"
-                              + "Only enable this if R30hedron specifically asks you to to test a bug fix.\n"
-                              + "Currently testing: end of Throne Room split after HotK fight for 0-5BC.");
+                                 + "Only enable this if R30hedron specifically asks you to to test a bug fix.\n"
+                                 + "Currently testing: end of Throne Room split after HotK fight for 0-5BC.");
+    settings.Add("igtreset", false, "Don't clear IGT on new run");
+    settings.SetToolTip("igtreset", "Compare against In-Game Timer will be additive on new runs.\n"
+                                  + "Use this setting if running a category that requires multiple "runs",\n"
+                                  + "such as 0-5BC or All Runes.\n"
+                                  + "Note: This setting will automatically disable automatic resets.");
+                              
 }
 
 init
@@ -388,6 +403,14 @@ update
         "playery: " + old.playery + " / " + current.playery + "\n" +
         "health : " + old.health  + " / " + current.health);
     }
+    
+    //code pulled from Doom64 autosplitter
+    int delta = current.time - old.time;
+    if (delta < 0)
+    {
+        delta = 0;
+    }
+    vars.igt += delta;
 }
 
 reset
@@ -398,6 +421,11 @@ reset
     if (settings["debug"] && (current.time == 0 && vars.pq.Contains(current.stage)))
     {
         print("DEBUG: Reset");
+    }
+    
+    if (settings["igtreset"])
+    {
+        return false;
     }
     
     return current.time == 0 && vars.pq.Contains(current.stage);
@@ -411,6 +439,11 @@ start
     if (settings["debug"] && (old.time == 0 && current.time > 00 && current.time < 0.1))
     {
         print("DEBUG: Start");
+    }
+    
+    if (settings["igtreset"] && (old.time == 0 && current.time > 00 && current.time < 0.1))
+    {
+        vars.igt = 0f;
     }
     
     return old.time == 0 && current.time > 00 && current.time < 0.1;
