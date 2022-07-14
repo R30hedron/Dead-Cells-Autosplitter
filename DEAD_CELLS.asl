@@ -405,7 +405,7 @@ update
     }
     
     //code pulled from Doom64 autosplitter
-    int delta = current.time - old.time;
+    double delta = current.time - old.time;
     if (delta < 0)
     {
         delta = 0;
