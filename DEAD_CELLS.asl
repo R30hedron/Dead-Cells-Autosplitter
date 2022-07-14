@@ -1,4 +1,4 @@
-/* Dead Cells Autosplitter (08-JUL-2022)
+/* Dead Cells Autosplitter (14-JUL-2022)
  * Maintained by R30hedron (@R30hedron#9520 on Discord)
  * Special thanks to Mintys (@Minty#4831) and Blargel (@Blargel#0213) for previously creating/maintaining the autosplitter.
  * Thanks to Midknight13 (@Midknight13#3966) for verifying GOG version addresses
@@ -288,7 +288,7 @@ startup
                                  + "Currently testing: end of Throne Room split after HotK fight for 0-5BC.");
     settings.Add("igtreset", false, "Don't clear IGT on new run");
     settings.SetToolTip("igtreset", "Compare against In-Game Timer will be additive on new runs.\n"
-                                  + "Use this setting if running a category that requires multiple "runs",\n"
+                                  + "Use this setting if running a category that requires multiple 'runs',\n"
                                   + "such as 0-5BC or All Runes.\n"
                                   + "Note: This setting will automatically disable automatic resets.");
                               
