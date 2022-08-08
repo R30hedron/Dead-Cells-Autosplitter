@@ -263,8 +263,6 @@ startup
         "Chemin",
         "Sortir",
         "Pasaje", // Spanish
-}
-
         "Camino",
         "Sal de",
         "Про", // Russian
