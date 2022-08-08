@@ -24,7 +24,7 @@ Special thanks to:
 * Mintys for the initial autosplitter
 * Blargel for previously maintaining the autosplitter.
 * Midknight13 for requesting and verifying autosplitter addresses for the GOG version.
-* Evian for adding the MD5 hashes for update 23.9
+* Evian for assisting with verifying MD5 hashes
 
 Changelog: 
 * 1.1 (May-2020) Major rework of autosplitter; changed to be monolithic and much easier to update
