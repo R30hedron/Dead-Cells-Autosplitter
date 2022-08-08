@@ -1,8 +1,8 @@
-/* Dead Cells Autosplitter (03-AUG-2022)
+/* Dead Cells Autosplitter (08-AUG-2022)
  * Maintained by R30hedron (@R30hedron#9520 on Discord)
  * Special thanks to Mintys (@Minty#4831) and Blargel (@Blargel#0213) for previously creating/maintaining the autosplitter.
  * Thanks to Midknight13 (@Midknight13#3966) for verifying GOG version addresses
- * Thanks to Evian (@Evian#6930) for verifying version 23.9 addresses
+ * Thanks to Evian (@Evian#6930) for verifying version addresses for 23.9 and 30.5
  * 
  * Currently works for the following Dead Cells versions. Additional versions added by request.
  *     Steam v. 16.2
@@ -20,7 +20,6 @@
  *     Steam v. 27.1
  *     Steam v. 28.1
  *     Steam v. 29.3
- *     Steam v. 30.4 
  *     Steam v. 30.5 (Current Patch)
  *
  *     GOG   v. 17.1
@@ -170,16 +169,6 @@ state("deadcells", "29.3") {
     double   playerx : "libhl.dll", 0x48184, 0x428, 0x0, 0x58, 0x64, 0x210;
     double   playery : "libhl.dll", 0x48184, 0x428, 0x0, 0x58, 0x64, 0x218;
     int      health  : "libhl.dll", 0x48184, 0x428, 0x0, 0x58, 0x64, 0x104;
-}
-
-state("deadcells", "30.4") {
-    string6  stage   : "discord.hdll", 0x1574, 0x1C;
-    double   time    : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x5C, 0x20;
-    int      control : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x68, 0x110, 0xA0;
-    double   headx   : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x68, 0x110, 0xA0, 0x210;
-    double   playerx : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x64, 0x210;
-    double   playery : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x64, 0x218;
-    int      health  : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x64, 0x104;
 }
 
 state("deadcells", "30.5") {
@@ -397,9 +386,7 @@ init
             version = "29.3";
             break;
         case "305741518727D862D0BF0E59A2EB3E94": //30.4
-            version = "30.4";
-            break;
-        case "F2523CB328FCA755D9B0BE0545BF1230": //30.5
+        case "F2523CB328FCA755D9B0BE0545BF1230": //30.5 (hotfix?)
             version = "30.5";
             break;
         default:
