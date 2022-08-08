@@ -20,7 +20,8 @@
  *     Steam v. 27.1
  *     Steam v. 28.1
  *     Steam v. 29.3
- *     Steam v. 30.4 (Current Patch)
+ *     Steam v. 30.4 
+ *     Steam v. 30.5 (Current Patch)
  *
  *     GOG   v. 17.1
  */
@@ -181,6 +182,15 @@ state("deadcells", "30.4") {
     int      health  : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x64, 0x104;
 }
 
+state("deadcells", "30.5") {
+    string6  stage   : "discord.hdll", 0x1574, 0x1C;
+    double   time    : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x5C, 0x20;
+    int      control : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x68, 0x110, 0xA0;
+    double   headx   : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x68, 0x110, 0xA0, 0x210;
+    double   playerx : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x64, 0x210;
+    double   playery : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x64, 0x218;
+    int      health  : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x64, 0x104;
+}
 
 state("deadcells", "Unknown Version") {
     //Default to 30.x
@@ -252,7 +262,16 @@ startup
       //"Passag", // French
         "Chemin",
         "Sortir",
-        "Pasaje", // Spanish
+        "Pasaje", // Spanishstate("deadcells", "30.4") {
+    string6  stage   : "discord.hdll", 0x1574, 0x1C;
+    double   time    : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x5C, 0x20;
+    int      control : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x68, 0x110, 0xA0;
+    double   headx   : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x68, 0x110, 0xA0, 0x210;
+    double   playerx : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x64, 0x210;
+    double   playery : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x64, 0x218;
+    int      health  : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x64, 0x104;
+}
+
         "Camino",
         "Sal de",
         "Про", // Russian
@@ -388,6 +407,9 @@ init
             break;
         case "305741518727D862D0BF0E59A2EB3E94": //30.4
             version = "30.4";
+            break;
+        case "F2523CB328FCA755D9B0BE0545BF1230": //30.5
+            version = "30.5";
             break;
         default:
             version = "Unknown Version";
