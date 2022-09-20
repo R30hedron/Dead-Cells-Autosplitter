@@ -1,4 +1,4 @@
-/* Dead Cells Autosplitter (08-AUG-2022)
+/* Dead Cells Autosplitter (20-SEP-2022)
  * Maintained by R30hedron (@R30hedron#9520 on Discord)
  * Special thanks to Mintys (@Minty#4831) and Blargel (@Blargel#0213) for previously creating/maintaining the autosplitter.
  * Thanks to Midknight13 (@Midknight13#3966) for verifying GOG version addresses
@@ -20,7 +20,7 @@
  *     Steam v. 27.1
  *     Steam v. 28.1
  *     Steam v. 29.3
- *     Steam v. 30.5 (Current Patch)
+ *     Steam v. 30.7 (Current Patch)
  *
  *     GOG   v. 17.1
  */
@@ -387,6 +387,7 @@ init
             break;
         case "305741518727D862D0BF0E59A2EB3E94": //30.4
         case "F2523CB328FCA755D9B0BE0545BF1230": //30.5 (hotfix?)
+        case "C07D7CBE64F0DDE40F45136CC72D4C38": //30.7
             version = "30.5";
             break;
         default:
