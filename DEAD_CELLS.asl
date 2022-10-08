@@ -1,4 +1,4 @@
-/* Dead Cells Autosplitter (20-SEP-2022)
+/* Dead Cells Autosplitter (08-OCT-2022)
  * Maintained by R30hedron (@R30hedron#9520 on Discord)
  * Special thanks to Mintys (@Minty#4831) and Blargel (@Blargel#0213) for previously creating/maintaining the autosplitter.
  * Thanks to Midknight13 (@Midknight13#3966) for verifying GOG version addresses
@@ -20,7 +20,8 @@
  *     Steam v. 27.1
  *     Steam v. 28.1
  *     Steam v. 29.3
- *     Steam v. 30.7 (Current Patch)
+ *     Steam v. 30.7
+ *     Steam v. 31.3 (Current Patch)
  *
  *     GOG   v. 17.1
  */
@@ -171,13 +172,24 @@ state("deadcells", "29.3") {
     int      health  : "libhl.dll", 0x48184, 0x428, 0x0, 0x58, 0x64, 0x104;
 }
 
-state("deadcells", "30.5") {
+state("deadcells", "30.7") {
     string6  stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x68, 0x110, 0xA0;
     double   headx   : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x68, 0x110, 0xA0, 0x210;
     double   playerx : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x64, 0x210;
     double   playery : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x64, 0x218;
+    int      health  : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x64, 0x104;
+}
+
+
+state("deadcells", "31.3") {
+    string6  stage   : "discord.hdll", 0x1574, 0x1C;
+    double   time    : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x5C, 0x20;
+    int      control : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x68, 0x110, 0xA0;
+    double   headx   : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x68, 0x110, 0xA0, 0x218;
+    double   playerx : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x64, 0x218;
+    double   playery : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x64, 0x220;
     int      health  : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x64, 0x104;
 }
 
@@ -388,7 +400,10 @@ init
         case "305741518727D862D0BF0E59A2EB3E94": //30.4
         case "F2523CB328FCA755D9B0BE0545BF1230": //30.5 (hotfix?)
         case "C07D7CBE64F0DDE40F45136CC72D4C38": //30.7
-            version = "30.5";
+            version = "30.7";
+            break;
+        case "B9F64A4F597632247F88C8C854ACB8C9":
+            version = "31.3";
             break;
         default:
             version = "Unknown Version";
