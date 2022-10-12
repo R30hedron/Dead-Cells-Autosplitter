@@ -21,7 +21,7 @@
  *     Steam v. 28.1
  *     Steam v. 29.3
  *     Steam v. 30.7
- *     Steam v. 31.3 (Current Patch)
+ *     Steam v. 31.5 (Current Patch)
  *
  *     GOG   v. 17.1
  */
@@ -183,7 +183,7 @@ state("deadcells", "30.7") {
 }
 
 
-state("deadcells", "31.3") {
+state("deadcells", "31.5") {
     string6  stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x68, 0x110, 0xA0;
@@ -194,13 +194,13 @@ state("deadcells", "31.3") {
 }
 
 state("deadcells", "Unknown Version") {
-    //Default to 30.x
+    //Default to 31.x
     string6  stage   : "discord.hdll", 0x1574, 0x1C;
     double   time    : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x5C, 0x20;
     int      control : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x68, 0x110, 0xA0;
-    double   headx   : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x68, 0x110, 0xA0, 0x210;
-    double   playerx : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x64, 0x210;
-    double   playery : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x64, 0x218;
+    double   headx   : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x68, 0x110, 0xA0, 0x218;
+    double   playerx : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x64, 0x218;
+    double   playery : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x64, 0x220;
     int      health  : "libhl.dll", 0x48184, 0x42C, 0x0, 0x58, 0x64, 0x104;
 }
 
@@ -402,7 +402,8 @@ init
         case "C07D7CBE64F0DDE40F45136CC72D4C38": //30.7
             version = "30.7";
             break;
-        case "B9F64A4F597632247F88C8C854ACB8C9":
+        case "B9F64A4F597632247F88C8C854ACB8C9": //31.3
+        case "3B5E290A98799390BE8778AEA45A0264": //31.5 (hotfix)
             version = "31.3";
             break;
         default:
