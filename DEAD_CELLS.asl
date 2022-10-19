@@ -404,7 +404,7 @@ init
             break;
         case "B9F64A4F597632247F88C8C854ACB8C9": //31.3
         case "3B5E290A98799390BE8778AEA45A0264": //31.5 (hotfix)
-            version = "31.3";
+            version = "31.5";
             break;
         default:
             version = "Unknown Version";
