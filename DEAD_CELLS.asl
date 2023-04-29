@@ -1,8 +1,9 @@
-/* Dead Cells Autosplitter (27-APR-2023)
+/* Dead Cells Autosplitter (29-APR-2023)
  * Maintained by R30hedron (@R30hedron#9520 on Discord)
  * Special thanks to Mintys (@Minty#4831) and Blargel (@Blargel#0213) for previously creating/maintaining the autosplitter.
  * Thanks to Midknight13 (@Midknight13#3966) for verifying GOG version addresses
  * Thanks to Evian (@Evian#6930) for verifying version addresses for 23.9 and 30.5
+ * Thanks to Vord (@Vord#0016) for an older update 33 MD5 hash
  * 
  * Currently works for the following Dead Cells versions. Additional versions added by request.
  *     Steam v. 16.2
@@ -443,6 +444,7 @@ init
         case "954D76713585F5180167B7CF50273003": //32.4
             version = "32.4";
             break;
+        case "5748B8BD4DC4107480B3258C9BB91660": //33.2?
         case "2CD38966576F214F573A2F31292B38B3": //33.3
             version = "33.3";
             break;
