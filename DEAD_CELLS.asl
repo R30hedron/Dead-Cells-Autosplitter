@@ -447,6 +447,7 @@ init
             version = "33.3";
             break;
         case "975026672E1F73032B77C72827354180": //34.1
+        case "B49D2F2E628A80FF7E4301D4203ED21A": //34.1 (hotfix)
             version = "34.1";
             break;
         default:
