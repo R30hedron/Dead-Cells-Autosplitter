@@ -464,7 +464,7 @@ init
         case "858E524DA4FEDAB2090853E86D7B200B": //34.x (JUN hotfix?)
             version = "34.x";
             break;
-        case "6B54DF1DD8D224FB5E2C7722BF6A99D2": //35.8
+        case "62B5B1FF7B2A89296BD0044B94A53C7B": //35.8
             version = "35.8";
             break;
         default:
