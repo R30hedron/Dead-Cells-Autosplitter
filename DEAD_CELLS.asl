@@ -465,6 +465,7 @@ init
             version = "34.x";
             break;
         case "62B5B1FF7B2A89296BD0044B94A53C7B": //35.8
+        case "BB1F4791BB84E3997BD026F375F83ABD": //35.8 (hotfix?)
             version = "35.8";
             break;
         default:
