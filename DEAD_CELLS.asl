@@ -1,4 +1,4 @@
-/* Dead Cells Autosplitter (19-AUG-2024)
+/* Dead Cells Autosplitter (27-JUN-2026)
  * Maintained by R30hedron (@R30hedron#9520 on Discord)
  * Special thanks to Mintys (@Minty#4831) and Blargel (@Blargel#0213) for previously creating/maintaining the autosplitter.
  * Thanks to Midknight13 (@Midknight13#3966) for verifying GOG version addresses
@@ -26,7 +26,8 @@
  *     Steam v. 32.4
  *     Steam v. 33.3
  *     Steam v. 34.2
- *     Steam v. 35.8 (Current Patch)
+ *     Steam v. 35.8
+ *     Steam v. 35.9 (Current Patch)
  *
  *     GOG   v. 17.1
  */
@@ -238,15 +239,25 @@ state("deadcells", "35.8") {
     int      health  : "libhl.dll", 0x48184, 0x4B0, 0x0, 0x58, 0x68, 0x12C;
 }
 
+state("deadcells", "35.9") {
+    string6  stage   : "discord.hdll", 0x1574, 0x1C;
+    double   time    : "libhl.dll", 0x49184, 0x4B0, 0x0, 0x58, 0x60, 0x20;
+    int      control : "libhl.dll", 0x49184, 0x4B0, 0x0, 0x58, 0x6C, 0x118, 0xB0;
+    double   headx   : "libhl.dll", 0x49184, 0x4B0, 0x0, 0x58, 0x6C, 0x118, 0xB0, 0x268;
+    double   playerx : "libhl.dll", 0x49184, 0x4B0, 0x0, 0x58, 0x68, 0x268;
+    double   playery : "libhl.dll", 0x49184, 0x4B0, 0x0, 0x58, 0x68, 0x270;
+    int      health  : "libhl.dll", 0x49184, 0x4B0, 0x0, 0x58, 0x68, 0x12C;
+}
+
 state("deadcells", "Unknown Version") {
     //Default to 35.x
     string6  stage   : "discord.hdll", 0x1574, 0x1C;
-    double   time    : "libhl.dll", 0x48184, 0x4B0, 0x0, 0x58, 0x60, 0x20;
-    int      control : "libhl.dll", 0x48184, 0x4B0, 0x0, 0x58, 0x6C, 0x118, 0xB0;
-    double   headx   : "libhl.dll", 0x48184, 0x4B0, 0x0, 0x58, 0x6C, 0x118, 0xB0, 0x268;
-    double   playerx : "libhl.dll", 0x48184, 0x4B0, 0x0, 0x58, 0x68, 0x268;
-    double   playery : "libhl.dll", 0x48184, 0x4B0, 0x0, 0x58, 0x68, 0x270;
-    int      health  : "libhl.dll", 0x48184, 0x4B0, 0x0, 0x58, 0x68, 0x12C;
+    double   time    : "libhl.dll", 0x49184, 0x4B0, 0x0, 0x58, 0x60, 0x20;
+    int      control : "libhl.dll", 0x49184, 0x4B0, 0x0, 0x58, 0x6C, 0x118, 0xB0;
+    double   headx   : "libhl.dll", 0x49184, 0x4B0, 0x0, 0x58, 0x6C, 0x118, 0xB0, 0x268;
+    double   playerx : "libhl.dll", 0x49184, 0x4B0, 0x0, 0x58, 0x68, 0x268;
+    double   playery : "libhl.dll", 0x49184, 0x4B0, 0x0, 0x58, 0x68, 0x270;
+    int      health  : "libhl.dll", 0x49184, 0x4B0, 0x0, 0x58, 0x68, 0x12C;
 }
 
 /* Variable Info
@@ -467,6 +478,10 @@ init
         case "62B5B1FF7B2A89296BD0044B94A53C7B": //35.8
         case "BB1F4791BB84E3997BD026F375F83ABD": //35.8 (hotfix?)
             version = "35.8";
+            break;
+        case "FD11244BC6C3CE9669D3A71ECF4FA5CE": //35.9 (Somehow, Motion Twin returned)
+        case "282E95F36DA17D7A69B1CE11A663A2E3": //35.9 gl
+            version = "35.9";
             break;
         default:
             version = "Unknown Version";
